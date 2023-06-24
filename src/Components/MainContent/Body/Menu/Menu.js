@@ -5,7 +5,7 @@ const Menu = (onMenuClick) => {
     return (
         <div className="menu">
             <div className="column">
-                <h3><a href="#section1" onClick={onMenuClick}>INSPIRATIONS</a></h3>
+                <div className="title"><a href="#section1" onClick={onMenuClick}>INSPIRATIONS</a></div>
                     <ul>
                         <li><a href="#section1-unedited">(UN)EDITED (galerie)</a></li>
                         <li><a href="#section1-blueHour">BLUE HOUR (video + galerie process en dessous)</a></li>
@@ -13,7 +13,7 @@ const Menu = (onMenuClick) => {
                     </ul>
             </div>
             <div className="column">
-                <h3><a href="#section2">Inspirations</a></h3>
+                <div className="title"><a href="#section2">Inspirations</a></div>
                 <ul>
                     <li><a href="#section2-angels">Angels (galerie)</a></li>
                     <li><a href="#section2-churchAndMountain">Church and Mountain (galerie)</a></li>
@@ -21,7 +21,7 @@ const Menu = (onMenuClick) => {
                 </ul>
             </div>
             <div className="column">
-                <h3><a href="#section3">Skillful</a></h3>
+                <div className="title"><a href="#section3">Skillful</a></div>
                 <ul>
                     <li><a href="#section3-observationalDrawing">Observational drawing (Carousel)</a></li>
                     <li><a href="#section3-monumental">a miniature MONUMENTAL space</a></li>
@@ -29,7 +29,7 @@ const Menu = (onMenuClick) => {
                 </ul>
             </div>
             <div className="column">
-                <h3><a href="#section4">Thoughtful</a></h3>
+                <div className="title"><a href="#section4">Thoughtful</a></div>
             </div>
         </div>
     );

@@ -112,7 +112,7 @@ const GalleryComponent = () => {
             cols: 2,
         },
         {
-            img: 'https://placehold.co/800x800',
+            img: 'https://placehold.co/1280x960',
             title: 'Photography',
             rows: 2,
             cols: 2,
