@@ -10,6 +10,7 @@
 
 .color-block {
     flex: 1;
+    height: calc(100% / 5);
 }
 
 .color-1 {
