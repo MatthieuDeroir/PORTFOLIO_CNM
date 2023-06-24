@@ -35,7 +35,7 @@ export default function Videos() {
     };
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} alignItems="stretch">
             <Grid item xs={12} md={4}>
                 <VideoDescription
                     title={videos[value].title}
