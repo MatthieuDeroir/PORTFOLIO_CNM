@@ -11,7 +11,7 @@ const videos = [
     {
         id: "j5tYc6UJz4Q",
         title: "Vidéo 1",
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "C'est la description de la vidéo 1."
     },
     {
         id: "4dSFrYwp4iM",
