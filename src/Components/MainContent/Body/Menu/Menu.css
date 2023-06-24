@@ -1,0 +1,47 @@
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: inherit; /* Pour hériter de la couleur du texte parent */
+    text-decoration: none; /* Pour supprimer le soulignement */
+}
+
+.menu a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+li:before {
+    content: "-";
+    margin-right: 5px;
+}
+
+/* Exemple de style supplémentaire pour les galeries ou les vidéos */
+.video {
+    margin-top: 10px;
+}
+
+.carousel {
+    margin-top: 10px;
+}

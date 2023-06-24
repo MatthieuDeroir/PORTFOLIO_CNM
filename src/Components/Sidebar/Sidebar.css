@@ -1,0 +1,38 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(100vw / 7);
+    display: flex;
+    flex-direction: column;
+}
+
+.color-block {
+    flex: 1;
+}
+
+.color-1 {
+    background: #4B8F8C;
+    box-shadow: 0 0 1px #4B8F8C;
+}
+
+.color-2 {
+    background: #2D232E;
+    box-shadow: 0 0 1px #2D232E;
+}
+
+.color-3 {
+    background: #F5DD90;
+    box-shadow: 0 0 1px #F5DD90;
+}
+
+.color-4 {
+    background: #D3C1D2;
+    box-shadow: 0 0 1px #D3C1D2;
+}
+
+.color-5 {
+    background: #FFE2FE;
+    box-shadow: 0 0 1px #FFE2FE;
+}

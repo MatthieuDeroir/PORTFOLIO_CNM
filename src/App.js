@@ -1,32 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import Overlay from './Components/Overlay/Overlay';
-import Header from './Components/Header/Header';
-import Body from './Components/Body/Body';
-import Footer from './Components/Footer/Footer';
+import Header from './Components/MainContent/Header/Header';
+import Body from './Components/MainContent/Body/Body';
+import Footer from './Components/MainContent/Footer/Footer';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import ThemeContext from './Assets/Themes/ThemeContext'; // Assurez-vous d'importer le ThemeContext correctement
+import bgImage from './Assets/Images/bg.webp';
+import Cursor from './Components/Cursor/Cursor';
+import Sidebar from "./Components/Sidebar/Sidebar";
+import MainContent from "./Components/MainContent/MainContent";
+import Fonts from "./Assets/Fonts/Fonts.css";
 
 function App() {
-    const [isContentVisible, setContentVisible] = useState(false);
+    //Overlay Configuration
+    const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+    const [titleMoved, setTitleMoved] = useState(false);
+    const [overlayTransparent, setOverlayTransparent] = useState(false);
 
-    useEffect(() => {
-        const handleClick = () => {
-            setContentVisible(true);
-        }
-        window.addEventListener('click', handleClick);
+    const handleOverlayClick = () => {
+        setOverlayTransparent(true);
+        setTitleMoved(true);
+        setTimeout(() => {
+            setIsOverlayVisible(false);
+        }, 1000);
+    };
 
-        // Cleanup function to remove the event listener
-        return () => window.removeEventListener('click', handleClick);
-    }, []);
+    //Mode
+    const [darkMode, setDarkMode] = useState(false);
+
+    const theme = createTheme({
+        palette: {
+            mode: darkMode ? 'dark' : 'light',
+        },
+    });
+
+    const toggleTheme = () => setDarkMode(!darkMode);
 
     return (
-        <div className="App">
-            { !isContentVisible && <Overlay /> }
-            { isContentVisible && (
-                <>
-                    <Header />
-                    <Body />
-                    <Footer />
-                </>
-            )}
+        <div className="App" style={{backgroundImage: `url(${bgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+            {isOverlayVisible &&
+                <Overlay onOverlayClick={handleOverlayClick} titleMoved={titleMoved} transparent={overlayTransparent}/>}
+            <ThemeContext.Provider value={toggleTheme}>
+                <ThemeProvider theme={theme}>
+                    <Cursor />
+                    <div className="container">
+                        <Sidebar />
+                        <MainContent/>
+                    </div>
+                </ThemeProvider>
+            </ThemeContext.Provider>
         </div>
     );
 }

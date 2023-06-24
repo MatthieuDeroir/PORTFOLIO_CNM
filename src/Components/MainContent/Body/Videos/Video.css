@@ -1,0 +1,33 @@
+.video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-area {
+    background-color: #4B8F8C;
+    color: #F5DD90;
+    padding: 20px;
+    width: 25%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.button1 {
+    background-color: #FFE2FE;
+    color: #D3C1D2;
+}
+
+.button2 {
+    background-color: #D3C1D2;
+    color: #FFE2FE;
+}
+
+.video-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}

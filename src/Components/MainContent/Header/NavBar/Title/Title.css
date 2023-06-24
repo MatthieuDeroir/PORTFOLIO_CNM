@@ -1,0 +1,24 @@
+.main-page-title {
+    font-size: 3em;
+    /*font-weight: bold;*/
+    letter-spacing: 0.4em;
+    font-family: 'Eina04-Light', sans-serif;
+    z-index: 0;
+    margin-left: 15vw;
+}
+
+.main-page-title-first {
+    color: #D3C1D2;
+}
+
+.main-page-title-rest {
+    color: #2D232E;
+
+}
+
+.main-page-title-rest:hover {
+    color: #FFE2FE;
+    text-shadow: 0 0 10px #2D232E;
+}
+
+
