@@ -13,10 +13,10 @@ function VideoDescription({ title, description, handleVolumeClick }) {
             height="100%"
         >
             <div>
-                <Typography variant="h4">{title}</Typography>
-                <Typography variant="body1">{description}</Typography>
+                <Typography variant="h4" fontFamily="'Eina04-Light', sans-serif">{title}</Typography>
+                <Typography variant="body1" fontFamily="'Eina04-Light', sans-serif">{description}</Typography>
             </div>
-            <Button variant="contained" color="primary" onClick={handleVolumeClick} sx={{backgroundColor: '#4B8F8C', color: '#F5DD90'}}>
+            <Button variant="contained" color="primary" onClick={handleVolumeClick} sx={{backgroundColor: '#4B8F8C', color: '#F5DD90'}} fontFamily="'Eina04-Light', sans-serif">
 
             Volume / Mode sombre
             </Button>

@@ -17,14 +17,16 @@
     align-items: center;
     text-align: center;
     color: white;
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     z-index: 100;
     background-size: cover;
     opacity: 1;
     transition: opacity 1s ease-in-out;
     position: fixed;  /* Ensure the ::after pseudo-element is positioned relative to this element */
+    font-family: 'Eina04-Light', sans-serif;
+
 }
+
 
 .overlay.overlay-transparent {
     opacity: 0;
