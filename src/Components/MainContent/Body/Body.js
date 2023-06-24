@@ -3,13 +3,14 @@ import Videos from "./Videos/Videos";
 import Menu from "./Menu/Menu";
 import Gallery from "./Gallery/Gallery";
 
-export default function Body() {
+export default function Body(onMenuClick) {
     return (
         <div>
             <Videos />
-            <Menu />
+            <Menu onMenuClick={onMenuClick} />
             <Gallery />
         </div>
     );
 }
+
 

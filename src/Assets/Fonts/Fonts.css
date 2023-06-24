@@ -4,3 +4,10 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Eina04-Regular';
+    src: url('./Eina/Eina04-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -8,10 +8,13 @@
 /*  background-image: url(./Assets/Images/bg.webp);*/
 
 body {
-  overflow-x: hidden;
   font-family: 'Eina04-Light', sans-serif;
-  
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Eina04-Regular', sans-serif;
+}
+
 
 
 /*}*/ /*Make a standard container*/

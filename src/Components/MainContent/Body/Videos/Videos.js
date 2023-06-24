@@ -35,22 +35,25 @@ export default function Videos() {
     };
 
     return (
-        <Grid container spacing={2} alignItems="stretch">
-            <Grid item xs={12} md={4}>
-                <VideoDescription
-                    title={videos[value].title}
-                    description={videos[value].description}
-                    handleVolumeClick={handleVolumeClick}
-                />
+        <div className="video">
+            <Grid container spacing={2} alignItems="stretch" >
+                <Grid item xs={12} md={4}>
+                    <VideoDescription
+                        title={videos[value].title}
+                        description={videos[value].description}
+                        handleVolumeClick={handleVolumeClick}
+                    />
+                </Grid>
+                <Grid item xs={12} md={8}>
+                    <Tabs value={value} onChange={handleChange}>
+                        {videos.map((video, index) => (
+                            <Tab key={index} label={video.title} style={{backgroundColor: index === 0 ? '#FFE2FE' : '#D3C1D2', color: index === 0 ? '#D3C1D2' : '#FFE2FE'}} />
+                        ))}
+                    </Tabs>
+                    <VideoPlayer videoId={videos[value].id} isMuted={isMuted} />
+                </Grid>
             </Grid>
-            <Grid item xs={12} md={8}>
-                <Tabs value={value} onChange={handleChange}>
-                    {videos.map((video, index) => (
-                        <Tab key={index} label={video.title} style={{backgroundColor: index === 0 ? '#FFE2FE' : '#D3C1D2', color: index === 0 ? '#D3C1D2' : '#FFE2FE'}} />
-                    ))}
-                </Tabs>
-                <VideoPlayer videoId={videos[value].id} isMuted={isMuted} />
-            </Grid>
-        </Grid>
+        </div>
+
     );
 }

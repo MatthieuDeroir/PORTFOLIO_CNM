@@ -1,20 +1,35 @@
 .menu {
     display: flex;
+    background-color: #D3C1D2; /* Ajoute une couleur de fond au menu */
+    margin: 20px;
 }
 
 .menu a {
-    color: inherit; /* Pour hériter de la couleur du texte parent */
-    text-decoration: none; /* Pour supprimer le soulignement */
+    color: #FFE2FE; /* Change la couleur de chaque élément */
+    text-decoration: none;
 }
 
+
 .menu a:hover {
-    text-decoration: underline; /* Ajouter un soulignement au survol */
+    color: #FFC0FE; /* Change la couleur lorsqu'on survole l'élément */
 }
 
 .column {
     flex: 1;
     padding: 20px;
+    position: relative;
 }
+
+.column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;  /* Ajustez ces valeurs comme vous le souhaitez */
+    bottom: 10%;
+    width: 1px;
+    background-color: #FFE2FE;
+}
+
 
 h3 {
     font-size: 18px;
@@ -30,11 +45,6 @@ ul {
 
 li {
     margin-bottom: 5px;
-}
-
-li:before {
-    content: "-";
-    margin-right: 5px;
 }
 
 /* Exemple de style supplémentaire pour les galeries ou les vidéos */

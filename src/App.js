@@ -36,6 +36,16 @@ function App() {
 
     const toggleTheme = () => setDarkMode(!darkMode);
 
+    const [menuClicked, setMenuClicked] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = menuClicked ? "auto" : "auto";
+    }, [menuClicked]);
+
+    const handleMenuClick = () => {
+        setMenuClicked(true);
+    };
+
     return (
         <div className="App" style={{backgroundImage: `url(${bgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
             {isOverlayVisible &&
@@ -45,7 +55,7 @@ function App() {
                     <Cursor />
                     <div className="container">
                         <Sidebar />
-                        <MainContent/>
+                        <MainContent onMenuClick={handleMenuClick}/>
                     </div>
                 </ThemeProvider>
             </ThemeContext.Provider>
