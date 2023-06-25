@@ -193,6 +193,8 @@ const GalleryComponent = () => {
             </div>
             <div>
                 <h1>Thoughtful</h1>
+                <Section itemData={itemData} />
+
             </div>
 
 

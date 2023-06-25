@@ -20,7 +20,22 @@ function Sidebar() {
         };
     }, []);
 
-    const calculateBrightness = (index) => {
+    const hexToRgb = (hex) => {
+        let r = 0, g = 0, b = 0;
+
+        if (hex.length === 4) {
+            r = "0x" + hex[1] + hex[1];
+            g = "0x" + hex[2] + hex[2];
+            b = "0x" + hex[3] + hex[3];
+        } else if (hex.length === 7) {
+            r = "0x" + hex[1] + hex[2];
+            g = "0x" + hex[3] + hex[4];
+            b = "0x" + hex[5] + hex[6];
+        }
+        return {r: +r, g: +g, b: +b};
+    }
+
+    const calculateColor = (color, index) => {
         const colorCount = 5;
         const progressStep = 100 / colorCount;
         const visibleIndex = Math.floor(scrollProgress / progressStep);
@@ -28,18 +43,25 @@ function Sidebar() {
         const endProgress = (visibleIndex + 1) * progressStep;
         const progressWithinRange = (scrollProgress - startProgress) / progressStep;
         const inverseProgress = 1 - progressWithinRange;
+
         let brightness = index === visibleIndex ? inverseProgress : index === visibleIndex - 1 ? progressWithinRange : 1;
-        brightness = Math.max(brightness, 0.9); // Réglez ici le seuil d'opacité minimum
-        return brightness;
+        brightness = Math.max(brightness, 0.95); // Réglez ici le seuil de luminosité minimum
+
+        const rgbColor = hexToRgb(color);
+        const r = Math.min(Math.floor(rgbColor.r * brightness), 255);
+        const g = Math.min(Math.floor(rgbColor.g * brightness), 255);
+        const b = Math.min(Math.floor(rgbColor.b * brightness), 255);
+
+        return `rgb(${r},${g},${b})`;
     };
 
     return (
         <div className="sidebar">
-            <div className="color-block color-1" style={{ opacity: calculateBrightness(0) }}></div>
-            <div className="color-block color-2" style={{ opacity: calculateBrightness(1) }}></div>
-            <div className="color-block color-3" style={{ opacity: calculateBrightness(2) }}></div>
-            <div className="color-block color-4" style={{ opacity: calculateBrightness(3) }}></div>
-            <div className="color-block color-5" style={{ opacity: calculateBrightness(4) }}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#4B8F8C', 0)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#2D232E', 1)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#F5DD90', 2)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#D3C1D2', 3)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#FFE2FE', 4)}}></div>
         </div>
     );
 }

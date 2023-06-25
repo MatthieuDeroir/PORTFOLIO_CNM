@@ -10,6 +10,7 @@ import Cursor from './Components/Cursor/Cursor';
 import Sidebar from "./Components/Sidebar/Sidebar";
 import MainContent from "./Components/MainContent/MainContent";
 import Fonts from "./Assets/Fonts/Fonts.css";
+import './App.css';
 
 function App() {
     //Overlay Configuration

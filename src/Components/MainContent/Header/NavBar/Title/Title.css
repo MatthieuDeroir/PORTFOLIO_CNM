@@ -5,6 +5,8 @@
     font-family: 'Eina04-Light', sans-serif;
     z-index: 0;
     margin-left: 15vw;
+    transition: all 1s linear;
+
 }
 
 .main-page-title-first {
@@ -17,8 +19,25 @@
 }
 
 .main-page-title-rest:hover {
+    /*color: #FFE2FE;*/
+
+
+}
+
+.main-page-title:hover {
     color: #FFE2FE;
     text-shadow: 0 0 10px #2D232E;
+    filter: blur(0.1rem);
+    transition: all 1s linear;
 }
+
+@media screen and (max-width: 768px) {
+    .main-page-title {
+        font-size: 2em;
+        margin-left: 0;
+    }
+}
+
+
 
 

@@ -8,7 +8,16 @@ const BodyTheme = createTheme({
         secondary: {
             main: '#ffffff',
         },
-    }
+    },
+    components: {
+        MuiTabs: {
+            styleOverrides: {
+                indicator: {
+                    backgroundColor: 'desiredColor',
+                },
+            },
+        },
+    },
 });
 
 export default BodyTheme;
