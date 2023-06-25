@@ -39,7 +39,6 @@ export default function Videos() {
             <Grid container spacing={2} alignItems="stretch" >
                 <Grid item xs={12} md={4}>
                     <VideoDescription
-                        title={videos[value].title}
                         description={videos[value].description}
                         handleVolumeClick={handleVolumeClick}
                     />
@@ -47,7 +46,7 @@ export default function Videos() {
                 <Grid item xs={12} md={8}>
                     <Tabs value={value} onChange={handleChange}>
                         {videos.map((video, index) => (
-                            <Tab key={index} label={video.title} style={{backgroundColor: index === 0 ? '#FFE2FE' : '#D3C1D2', color: index === 0 ? '#D3C1D2' : '#FFE2FE'}} />
+                            <Tab key={index} label={video.title} style={{backgroundColor: index === 0 ? '#FFE2FE' : '#D3C1D2', color: index === 0 ? '#D3C1D2' : '#FFE2FE', textShadow: index === 0 ? '1px 1px 2px white' : '1px 1px 2px black'}} />
                         ))}
                     </Tabs>
                     <VideoPlayer videoId={videos[value].id} isMuted={isMuted} />

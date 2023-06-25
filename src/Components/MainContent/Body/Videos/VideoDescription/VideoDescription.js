@@ -11,14 +11,16 @@ function VideoDescription({ title, description, handleVolumeClick }) {
             flexDirection="column"
             justifyContent="space-between"
             height="100%"
+            border-radius='40px'
+            box-shadow="0 0 5px black"
         >
             <div>
                 <Typography variant="h4" fontFamily="'Eina04-Light', sans-serif">{title}</Typography>
                 <Typography variant="body1" fontFamily="'Eina04-Light', sans-serif">{description}</Typography>
             </div>
-            <Button variant="contained" color="primary" onClick={handleVolumeClick} sx={{backgroundColor: '#4B8F8C', color: '#F5DD90'}} fontFamily="'Eina04-Light', sans-serif">
+            <Button color="inherit" onClick={handleVolumeClick} sx={{backgroundColor: '#4B8F8C', color: '#F5DD90'}} fontFamily="'Eina04-Light', sans-serif">
 
-            Volume / Mode sombre
+            Focus on video
             </Button>
         </Box>
     );

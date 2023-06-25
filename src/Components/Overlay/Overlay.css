@@ -6,7 +6,6 @@
 /*}*/
 
 .overlay {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -24,6 +23,7 @@
     transition: opacity 1s ease-in-out;
     position: fixed;  /* Ensure the ::after pseudo-element is positioned relative to this element */
     font-family: 'Eina04-Light', sans-serif;
+    overflow: hidden;
 
 }
 
@@ -42,6 +42,7 @@
     position: absolute;
     transition: opacity 1s ease-in-out;
     z-index: -1;  /* Ensure the image is below the text */
+    overflow: hidden;
 }
 
 .overlay.overlay-transparent::after {

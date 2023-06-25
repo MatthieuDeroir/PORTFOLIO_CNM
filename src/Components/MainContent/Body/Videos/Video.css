@@ -1,7 +1,6 @@
 .video {
     margin: 20px;
     font-family: 'Eina04-Light', sans-serif;
-
 }
 
 .video-container {
@@ -16,7 +15,7 @@
     color: #F5DD90;
     padding: 20px;
     width: 25%;
-    height: auto;
+    height: 25%;
     margin-right: 20px;
 }
 
