@@ -37,10 +37,10 @@
     box-shadow: 0 0 5px #FFE2FE !important;
 }
 
-/* CSS for larger screens like iMac */
-@media (min-width: 1824px) {
-    /* Adjustments for larger screens */
-    .main-content {
-        margin: 25px;
-    }
-}
+/*!* CSS for larger screens like iMac *!*/
+/*@media (min-width: 1824px) {*/
+/*    !* Adjustments for larger screens *!*/
+/*    .main-content {*/
+/*        margin: 25px;*/
+/*    }*/
+/*}*/

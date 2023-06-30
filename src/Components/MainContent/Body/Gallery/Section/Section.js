@@ -2,22 +2,17 @@ import * as React from 'react';
 import { Box, Modal } from '@mui/material';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-
-function srcset(image, size, rows = 1, cols = 1) {
-    return {
-        src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-        srcSet: `${image}?w=${size * cols}&h=${
-            size * rows
-        }&fit=crop&auto=format&dpr=2 2x`,
-    };
-}
-
 export default function Section({itemData}) {
     const [open, setOpen] = React.useState(false);
+    const [hover, setHover] = React.useState(false);
     const [selectedImg, setSelectedImg] = React.useState(null);
+    const [selectedTitle, setSelectedTitle] = React.useState(null);
+    const [selectedDescription, setSelectedDescription] = React.useState(null);
 
-    const handleOpen = (img) => {
-        setSelectedImg(img);
+    const handleOpen = (item) => {
+        setSelectedImg(item.img);
+        setSelectedTitle(item.title);
+        setSelectedDescription(item.description);
         setOpen(true);
     };
 
@@ -33,12 +28,14 @@ export default function Section({itemData}) {
             rowHeight={121}
         >
             {itemData.map((item) => (
-                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} onClick={() => handleOpen(item.img)} sx={{ '&:focus': { outline: 'none' } }}>  // Update this line>
+                <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1} onClick={() => handleOpen(item)} sx={{ '&:focus': { outline: 'none' } }}>
                     <Box
                         component="img"
-                        {...srcset(item.img, 121, item.rows, item.cols)}
+                        src={item.img}
                         alt={item.title}
                         loading="lazy"
+                        onMouseEnter={() => setHover(true)}
+                        onMouseLeave={() => setHover(false)}
                         sx={{
                             width: '100%',
                             height: '100%',
@@ -70,7 +67,14 @@ export default function Section({itemData}) {
                             },
                         }}
                     >
-                        {item.title}
+                        {hover ?
+                            <div>
+                                {item.title}
+                                {item.description}
+                            </div>
+                            :
+                            null
+                        }
                     </Box>
                 </ImageListItem>
             ))}
@@ -85,7 +89,13 @@ export default function Section({itemData}) {
                     justifyContent: 'center',
                 }}
             >
-                <img src={selectedImg} style={{maxWidth: '90%', maxHeight: '90%'}} alt="" />
+                <Box>
+                    <img src={selectedImg} style={{maxWidth: '90%', maxHeight: '90%'}} alt="" />
+                    <Box>
+                        <h2>{selectedTitle}</h2>
+                        <p>{selectedDescription}</p>
+                    </Box>
+                </Box>
             </Modal>
         </ImageList>
     );

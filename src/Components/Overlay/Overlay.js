@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import './Overlay.css';
-import bgImage from '../../Assets/Images/bg.webp';
+// import bgImage from '../../../public/Images/bg.webp';
 
 function Overlay({onOverlayClick, titleMoved, transparent}) {
     const titleClass = titleMoved ? 'overlay-title' : 'overlay-title';

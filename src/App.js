@@ -5,7 +5,7 @@ import Body from './Components/MainContent/Body/Body';
 import Footer from './Components/MainContent/Footer/Footer';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import ThemeContext from './Assets/Themes/ThemeContext'; // Assurez-vous d'importer le ThemeContext correctement
-import bgImage from './Assets/Images/bg.webp';
+// import bgImage from '../public/Images/bg.webp';
 import Cursor from './Components/Cursor/Cursor';
 import Sidebar from "./Components/Sidebar/Sidebar";
 import MainContent from "./Components/MainContent/MainContent";

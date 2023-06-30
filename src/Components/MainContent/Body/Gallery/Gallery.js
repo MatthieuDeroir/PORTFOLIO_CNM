@@ -1,240 +1,897 @@
 import React from 'react';
 import Section from './Section/Section';
-import bgImage from '../../../../Assets/Images/bg.webp';
+import {Gallery} from 'react-grid-gallery';
+import ImageOverlay from './ImageOverlay/ImageOverlay';
+
+import Unedited from "./Unedited";
 
 const GalleryComponent = () => {
 
-    //TODO: Develop an algorithm to fetch images from a folder and display them in the gallery in function of their name.
-    // Naming Convention : {categoryName}_{columnNumber}_{projectName}_{imageIndex})
-    // Example : artProject_1_unedited_1.webp
-    // Example : artProject_1_unedited_2.webp
-    // Example : artProject_1_unedited_3.webp
-    // Example : artProject_1_unedited_4.webp
-    // Example : artProject_1_unedited_5.webp
-
-    // Example : artProject_1_blueHour_1.webp
-    // Example : artProject_1_blueHour_2.webp
-    // Example : artProject_1_blueHour_3.webp
-    // Example : artProject_1_blueHour_4.webp
-    // Example : artProject_1_blueHour_5.webp
-
-    // Example : artProject_1_collage_1.webp
-    // Example : artProject_1_collage_2.webp
-
-    function importAll(r) {
-        return r.keys().map((fileName) => ({
-            link: r(fileName).default,
-            format: fileName.substring(fileName.lastIndexOf('/') + 1)
-        }));
-    }
-
-    const images = importAll(require.context('../../../../Assets/Images', false, /\.(png|jpe?g|svg)$/));
-
-
-
-    //Column 1 : INSPIRATIONS
-    const images_1_unedited = [
-        {url: `${bgImage}`, description: '(UN)EDITED'},
-    ];
-
-    const images_1_blueHour = [
-        {url: `${bgImage}`, description: 'BLUE HOUR'},
-    ];
-
-    const images_1_collage = [
-        {url: `${bgImage}`, description: 'COLLAGE'},
-    ];
-
-    //Column 2 : Inspirations
-
-    const images_2_angels = [
-        {url: `${bgImage}`, description: 'Angels'},
-    ];
-
-    const images_2_churchAndMountain = [
-        {url: `${bgImage}`, description: 'Church and Mountain'},
-    ];
-
-    const images_2_motherNature = [
-        {url: `${bgImage}`, description: 'Mother Nature is on my mind'},
-    ];
-
-    //Column 3 : Skillful
-
-    const images_3_monumental = [
-        {url: `${bgImage}`, description: 'a miniature MONUMENTAL space'},
-    ];
-
-    const images_3_personalPractice = [
-        {url: `${bgImage}`, description: 'Personal practice and inspirations'},
-    ];
-
-    const images_3_welding = [
-        {url: `${bgImage}`, description: 'Welding and stained glass process'},
-    ];
-
-    const images_3_observationalDrawing = [
-        {url: `${bgImage}`, description: 'Observational drawing'},
-    ];
-
-    //Column 4 : Thoughtful
-
-
-    const GalleryImages = [
+    const unedited = [
         {
-            src: {bgImage},
-            thumbnail: {bgImage},
-            thumbnailWidth: 320,
-            thumbnailHeight: 212,
-            caption: "Image 1",
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
+            thumbnailWidth: 4,
+            thumbnailHeight: 4,
+            caption: 'FLOWERPICKING',
+            description: 'DIGITAL COLLAGE \n' +
+                'early 2021\n' +
+                'This flower wasn’t where it should be. \n',
+            customOverlay: <ImageOverlay title='FLOWERPICKING'
+                                         description={'DIGITAL COLLAGE \n early 2021 \n This flower wasn’t where it should be.'}/>
         },
         {
-            src: "src/Assets/Images/bg.webp",
-            thumbnail: "src/Assets/Images/bg.webp",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212,
-            caption: "Image 2",
-        },
-        // Ajoutez plus d'images ici si nécessaire
-    ];
-
-    const itemData = [
-        {
-            img: 'https://placehold.co/600x400',
-            title: 'Drawing',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NEWBLUR',
+            description: '',
         },
         {
-            img: 'https://placehold.co/800x600',
-            title: 'Painting',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 2,
+            caption: 'GOLDHEAD',
+            description: '',
         },
         {
-            img: 'https://placehold.co/1280x960',
-            title: 'Photography',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'UNDERWATER',
+            description: '',
         },
         {
-            img: 'https://placehold.co/600x400',
-            title: 'Movie',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'REDCURTAIN',
+            description: '',
         },
         {
-            img: 'https://placehold.co/800x600',
-            title: 'Drawing',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'REDCURTAIN',
+            description: '',
         },
         {
-            img: 'https://placehold.co/800x600',
-            title: 'Sculpting',
-            rows: 2,
-            cols: 2,
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'REFLECTIONS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'SPACEAVOCADO',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'PINKSUN',
+            description: '',
         }
-
-
     ];
+
+    const blueHour = [
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_1.gif'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_1.gif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_2.gif'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_2.gif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_3.gif'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_3.gif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_5.gif'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_5.gif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_6.gif'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_6.gif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            description: '',
+        }
+    ]
+
+    const collage = [
+        {
+            src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'COLLAGE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'COLLAGE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'COLLAGE',
+            description: '',
+        }
+    ]
+
+    const angels = [
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_EYES_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_EYES_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'EYES',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_EYES_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_EYES_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'EYES',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_GLASS_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_GLASS_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GLASS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LOVE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LOVE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LOVE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LOVE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_6.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_6.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'NATURE',
+            description: '',
+        }
+    ]
+
+    const durableMaterials = [
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Church and Mountain',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Church and Mountain',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Church and Mountain',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Church and Mountain',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Church and Mountain',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Camaieu',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Camaieu',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Camaieu',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Camaieu',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Camaieu',
+            description: '',
+        }
+    ]
+
+    const motherNature = [
+        {
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Mother Nature',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Mother Nature',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Mother Nature',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Mother Nature',
+            description: '',
+        }
+    ]
+
+    const analogDrawings_Journaling = [
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_6.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_6.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_8.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_8.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_9.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_9.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_10.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_10.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_11.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_11.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_12.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling_12.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'Journaling',
+            description: '',
+        },
+    ]
+
+    const analogDrawings_ME = [
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'ME',
+            description: '',
+        }
+    ]
+
+    const analogDrawings_PORTRAIT = [
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'PORTRAIT',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'PORTRAIT',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'PORTRAIT',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_PORTRAIT_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'PORTRAIT',
+            description: '',
+        }
+    ]
+
+    const analogDrawings_LIFEDRAWING = [
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(1).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(1).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LIFEDRAWING',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(2).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(2).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LIFEDRAWING',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(3).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(3).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LIFEDRAWING',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(4).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_wLIFEDRAWING_(4).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'LIFEDRAWING',
+            description: '',
+        }
+    ]
+
+    const digitalDrawings = [
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(1).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(1).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(2).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(2).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(3).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(3).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(4).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(4).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(5).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/Characters_3_(5).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(8).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(8).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(9).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(9).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(10).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(10).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(11).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(11).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(12).webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_DIGITALDRAWINGS/characters_3_(12).webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'CHARACTERS',
+            description: '',
+        }
+    ]
+    const objectPhotography = [
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_1_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_1.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_2_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        },
+        {
+            src: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/3_OBJECTPHOTOGRAPHY/objectphotos_3_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'OBJECTPHOTOGRAPHY',
+            description: '',
+        }
+    ]
 
 
     return (
         <div className="gallery">
+            <h1>INSPIRATIONS</h1>
             <div>
-                <h1>INSPIRATIONS</h1>
-                <div>
-                    <h2>(UN)EDITED</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>BLUE HOUR</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>COLLAGE</h2>
-                    <Section itemData={itemData} />
-                </div>
+                <h2>(UN)EDITED</h2>
+                <Gallery
+                    images={unedited}
+                    enableImageSelection={false}
+                    rowHeight={600}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
             </div>
             <div>
-                <h1>Inspirations</h1>
-                <div>
-                    <h2>Angels</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>Church and Mountain</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>Mother Nature is on my mind</h2>
-                    <Section itemData={itemData} />
-                </div>
+                <h2>BLUE HOUR</h2>
+                <Gallery
+                    images={blueHour}
+                    enableImageSelection={false}
+                    rowHeight={600}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+            </div>
+
+            <h1>Inspiration</h1>
+            <div>
+                <h2>Angels</h2>
+                <Gallery
+                    images={angels}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
             </div>
             <div>
-                <h1>Skillful</h1>
-                <div>
-                    <h2>a miniature MONUMENTAL space</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>Personal practice and inspirations</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>Welding and stained glass process</h2>
-                    <Section itemData={itemData} />
-                </div>
-                <div>
-                    <h2>Observational drawing</h2>
-                    <Section itemData={itemData} />
-                </div>
+                <h2>Durable Materials</h2>
+                <Gallery
+                    images={durableMaterials}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+
             </div>
             <div>
-                <h1>Thoughtful</h1>
-                <Section itemData={itemData} />
+                <h2>Mother Nature is on my mind</h2>
+                <Gallery
+                    images={motherNature}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+            </div>
+            <h1>Practices</h1>
+            <div>
+                <h2>Analog drawings</h2>
+                <h3>Journaling</h3>
+                <Gallery
+                    images={analogDrawings_Journaling}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+                <h3>ME</h3>
+                <Gallery
+                    images={analogDrawings_ME}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+                <h3>PORTRAIT</h3>
+                <Gallery
+                    images={analogDrawings_PORTRAIT}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+                <h3>LIFEDRAWING</h3>
+                <Gallery
+                    images={analogDrawings_LIFEDRAWING}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+
 
             </div>
-
-
-
-
-
+            <div>
+                <h2>Digital drawings</h2>
+                <Gallery
+                    images={digitalDrawings}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+            </div>
+            <div>
+                <h2>Object photography</h2>
+                <Gallery
+                    images={objectPhotography}
+                    enableImageSelection={false}
+                    rowHeight={500}
+                    margin={10}
+                    lightboxWidth={1000}
+                />
+            </div>
         </div>
     );
 };
 
 export default GalleryComponent;
-
-
-
-
-
-
-{/*<Gallery images={GalleryImages} />*/}
-{/*<h2 id="section1">INSPIRATIONS</h2>*/}
-{/*<h3 id="section1-unedited">(UN)EDITED</h3>*/}
-{/*<Section images={images_1_unedited}/>*/}
-{/*<h3 id="section1-blueHour">BLUE HOUR</h3>*/}
-{/*<Section images={images_1_blueHour}/>*/}
-{/*<h3 id="section1-collage">COLLAGE</h3>*/}
-{/*<Section images={images_1_collage}/>*/}
-
-{/*<h2 id="section2">Inspirations</h2>*/}
-{/*<h3 id="section2-angels">Angels</h3>*/}
-{/*<Section images={images_2_angels}/>*/}
-{/*<h3 id="section2-churchAndMountain">Church and Mountain</h3>*/}
-{/*<Section images={images_2_churchAndMountain}/>*/}
-{/*<h3 id="section2-motherNature">Mother Nature is on my mind</h3>*/}
-{/*<Section images={images_2_motherNature}/>*/}
-
-{/*<h2 id="section3">Skillful</h2>*/}
-{/*<h3 id="section3-observationalDrawing">Observational drawing (Carousel)</h3>*/}
-{/*<Section images={images_3_observationalDrawing}/>*/}
-{/*<h3 id="section3-monumental">a miniature MONUMENTAL space</h3>*/}
-{/*<Section images={images_3_monumental}/>*/}
-{/*<h3 id="section3-welding">Welding and stained glass process (linked through Church and Mountain)</h3>*/}
-{/*<Section images={images_3_welding}/>*/}
-
-{/*<h2 id="section4">Thoughtful</h2>*/}
