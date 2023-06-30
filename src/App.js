@@ -9,6 +9,8 @@ import bgImage from './Assets/Images/bg.webp';
 import Cursor from './Components/Cursor/Cursor';
 import Sidebar from "./Components/Sidebar/Sidebar";
 import MainContent from "./Components/MainContent/MainContent";
+import { Grid } from '@mui/material';
+
 import Fonts from "./Assets/Fonts/Fonts.css";
 import './App.css';
 
@@ -48,16 +50,20 @@ function App() {
     };
 
     return (
-        <div className="App" style={{backgroundImage: `url(${bgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
+        <div className="App">
             {isOverlayVisible &&
                 <Overlay onOverlayClick={handleOverlayClick} titleMoved={titleMoved} transparent={overlayTransparent}/>}
             <ThemeContext.Provider value={toggleTheme}>
                 <ThemeProvider theme={theme}>
                     <Cursor />
-                    <div className="container">
-                        <Sidebar />
-                        <MainContent onMenuClick={handleMenuClick}/>
-                    </div>
+                    <Grid container>
+                        <Grid item xs={1}>
+                            <Sidebar />
+                        </Grid>
+                        <Grid item xs={11}>
+                            <MainContent onMenuClick={handleMenuClick}/>
+                        </Grid>
+                    </Grid>
                 </ThemeProvider>
             </ThemeContext.Provider>
         </div>

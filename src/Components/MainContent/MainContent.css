@@ -1,7 +1,6 @@
 .main-content {
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
-    flex: 6;
     height: 100%;
     margin: 20px;
     font-family: 'Eina04-Light', sans-serif;
@@ -23,5 +22,5 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-left: calc(100vw / 7); /* Remplacez margin-left par padding-left */
+    /*padding-left: calc(100vw / 7); !* Remplacez margin-left par padding-left *!*/
 }

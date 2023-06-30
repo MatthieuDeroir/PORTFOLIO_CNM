@@ -13,7 +13,7 @@ const Menu = (onMenuClick) => {
                     </ul>
             </div>
             <div className="column">
-                <div className="title"><a href="#section2">Inspirations</a></div>
+                <div className="title"><a href="#section2">Inspiration</a></div>
                 <ul>
                     <li><a href="#section2-angels">Angels (galerie)</a></li>
                     <li><a href="#section2-churchAndMountain">Church and Mountain (galerie)</a></li>
@@ -21,15 +21,16 @@ const Menu = (onMenuClick) => {
                 </ul>
             </div>
             <div className="column">
-                <div className="title"><a href="#section3">Skillful</a></div>
+
+
+            </div>
+            <div className="column">
+                <div className="title"><a href="#section4">Practices</a></div>
                 <ul>
                     <li><a href="#section3-observationalDrawing">Observational drawing (Carousel)</a></li>
                     <li><a href="#section3-monumental">a miniature MONUMENTAL space</a></li>
                     <li><a href="#section3-welding">Welding and stained glass process (linked through Church and Mountain)</a></li>
                 </ul>
-            </div>
-            <div className="column">
-                <div className="title"><a href="#section4">Thoughtful</a></div>
             </div>
         </div>
     );
