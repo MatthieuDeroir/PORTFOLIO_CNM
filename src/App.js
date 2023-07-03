@@ -60,7 +60,7 @@ function App() {
                         <Grid item xs={1}>
                             <Sidebar />
                         </Grid>
-                        <Grid item xs={11}>
+                        <Grid item xs={11} container justifyContent="center" alignItems="center">
                             <MainContent onMenuClick={handleMenuClick}/>
                         </Grid>
                     </Grid>

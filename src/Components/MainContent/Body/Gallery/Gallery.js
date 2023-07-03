@@ -1,9 +1,12 @@
 import React from 'react';
 import Section from './Section/Section';
 import {Gallery} from 'react-grid-gallery';
+import CustomGallery from './CustomGallery/CustomGallery';
 import ImageOverlay from './ImageOverlay/ImageOverlay';
 
 import Unedited from "./Unedited";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
 const GalleryComponent = () => {
 
@@ -224,14 +227,6 @@ const GalleryComponent = () => {
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_2.webp'),
             thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_2.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'NATURE',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_3.webp'),
-            thumbnail: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_3.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
@@ -779,116 +774,205 @@ const GalleryComponent = () => {
     return (
         <div className="gallery">
             <h1>INSPIRATIONS</h1>
-            <div>
-                <h2>(UN)EDITED</h2>
-                <Gallery
-                    images={unedited}
-                    enableImageSelection={false}
-                    rowHeight={600}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
-            </div>
-            <div>
+            <div >
                 <h2>BLUE HOUR</h2>
-                <Gallery
-                    images={blueHour}
-                    enableImageSelection={false}
-                    rowHeight={600}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
-            </div>
+                <div style={{ justifyContent: 'center !important' }}>
+                    {/*<CustomGallery*/}
+                    {/*    images={blueHour}*/}
+                    {/*    enableImageSelection={false}*/}
+                    {/*    rowHeight={500}*/}
+                    {/*    margin={10}*/}
+                    {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
+                    {/*/>*/}
 
+                    {/*<Gallery*/}
+                    {/*    images={blueHour}*/}
+                    {/*    enableImageSelection={false}*/}
+                    {/*    rowHeight={window.innerHeight * 0.5}*/}
+                    {/*    margin={10}*/}
+                    {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
+                    {/*    lightboxWidth={window.innerWidth * 0.9}*/}
+
+                    {/*/>*/}
+
+                    <ImageList variant="masonry" cols={2} gap={8}>
+                        {blueHour.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <img
+                                    src={`${item.src}`}
+                                    srcSet={`${item.src}`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                </div>
+
+            </div>
+            <div>
+                <h2>UN?EDITED</h2>
+                {/*<Gallery*/}
+                {/*    images={unedited}*/}
+                {/*    enableImageSelection={false}*/}
+                {/*    rowHeight={600}*/}
+                {/*    margin={10}*/}
+                {/*    lightboxWidth={1000}*/}
+                {/*/>*/}
+
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {unedited.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+                {/*<CustomGallery*/}
+                {/*    images={unedited}*/}
+                {/*    enableImageSelection={false}*/}
+                {/*    rowHeight={window.innerHeight * 0.5}*/}
+                {/*    margin={10}*/}
+                {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
+                {/*/>*/}
+            </div>
             <h1>Inspiration</h1>
             <div>
                 <h2>Angels</h2>
-                <Gallery
-                    images={angels}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {angels.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
             </div>
             <div>
                 <h2>Durable Materials</h2>
-                <Gallery
-                    images={durableMaterials}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {durableMaterials.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
 
             </div>
             <div>
                 <h2>Mother Nature is on my mind</h2>
-                <Gallery
-                    images={motherNature}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {motherNature.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
             </div>
             <h1>Practices</h1>
             <div>
                 <h2>Analog drawings</h2>
                 <h3>Journaling</h3>
-                <Gallery
-                    images={analogDrawings_Journaling}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
-                <h3>ME</h3>
-                <Gallery
-                    images={analogDrawings_ME}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
-                <h3>PORTRAIT</h3>
-                <Gallery
-                    images={analogDrawings_PORTRAIT}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
-                <h3>LIFEDRAWING</h3>
-                <Gallery
-                    images={analogDrawings_LIFEDRAWING}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {analogDrawings_Journaling.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+                <h3>Self-Portaits</h3>
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {analogDrawings_ME.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+                <h3>Life Drawing</h3>
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {analogDrawings_PORTRAIT.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {analogDrawings_LIFEDRAWING.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
 
 
             </div>
             <div>
                 <h2>Digital drawings</h2>
-                <Gallery
-                    images={digitalDrawings}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {digitalDrawings.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
             </div>
             <div>
                 <h2>Object photography</h2>
-                <Gallery
-                    images={objectPhotography}
-                    enableImageSelection={false}
-                    rowHeight={500}
-                    margin={10}
-                    lightboxWidth={1000}
-                />
+                <ImageList variant="masonry" cols={2} gap={8}>
+                    {objectPhotography.map((item) => (
+                        <ImageListItem key={item.img}>
+                            <img
+                                src={`${item.src}`}
+                                srcSet={`${item.src}`}
+                                alt={item.title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
             </div>
         </div>
     );

@@ -45,7 +45,7 @@ function Sidebar() {
         const inverseProgress = 1 - progressWithinRange;
 
         let brightness = index === visibleIndex ? inverseProgress : index === visibleIndex - 1 ? progressWithinRange : 1;
-        brightness = Math.max(brightness, 0.95); // Réglez ici le seuil de luminosité minimum
+        brightness = Math.max(brightness, 0.5); // Réglez ici le seuil de luminosité minimum
 
         const rgbColor = hexToRgb(color);
         const r = Math.min(Math.floor(rgbColor.r * brightness), 255);

@@ -1,53 +1,58 @@
 html, body {
-  /*margin: 0;*/
-  /*padding: 0;*/
-  /*width: 100vw;*/
-  /*height: 100vh;*/
-  /*overflow: hidden;*/
-  /*background-image: url(./Assets/Images/bg.webp);*/
-  background-color: #ffffff;
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    /*background-image: url(./Assets/Images/bg.webp);*/
+    background-color: #ffffff;
 }
+
 body {
-  font-family: 'Eina04-Light', sans-serif;
+    font-family: 'Eina04-Light', sans-serif;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Eina04-Regular', sans-serif;
+    font-family: 'Eina04-Regular', sans-serif;
 }
-
 
 
 /*}*/ /*Make a standard container*/
 .container {
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*display: flex;*/
-  /*flex-direction: row;*/
-  /*flex-wrap: wrap;*/
-  /*justify-content: center;*/
-  /*align-items: center;*/
-  /*background-color: black;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*background-color: black;*/
 }
 
 .App {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  /*align-content: center;*/
-  /*justify-content: space-around;*/
-  /*display: flex;*/
-  /*background:transparent;*/
-  /*font-family: 'Eina04-Light', sans-serif;*/
-  /*background-color: black;*/
-  /*background-image: url('./Assets/Images/bg.webp');*/
-  /*background-repeat: no-repeat;*/
-  /*background-attachment: fixed;*/
-  /*background-position: center center;*/
-  /*background-size: cover;*/
+    width: 100%;
+    height: 100%;
+    display: flex; /* enable flexbox */
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    flex-direction: column; /* stack children vertically */
+    text-align: center;
+    /* the rest of your styles... */
+    /*align-content: center;*/
+    /*justify-content: space-around;*/
+    /*display: flex;*/
+    /*background:transparent;*/
+    /*font-family: 'Eina04-Light', sans-serif;*/
+    /*background-color: black;*/
+    /*background-image: url('./Assets/Images/bg.webp');*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
 
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
 }
 
 

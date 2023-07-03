@@ -2,24 +2,21 @@
     /*position: absolute;*/
     /*right: 0;*/
     /*height: 100%;*/
-    /*margin: 20px;*/
+    margin-left: 5vw;
+    margin-right: 5vw;
     font-family: 'Eina04-Light', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align vertically in the center */
+    align-items: center; /* Align horizontally in the center */
 }
-
-/*.main-content .content {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: flex-start;*/
-/*    align-items: center;*/
-/*}*/
 
 .content {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    /*padding-left: calc(100vw / 7); !* Remplacez margin-left par padding-left *!*/
+    justify-content: center; /* Align vertically in the center */
+    align-items: center; /* Align horizontally in the center */
 }
+

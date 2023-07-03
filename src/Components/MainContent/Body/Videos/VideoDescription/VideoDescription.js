@@ -2,6 +2,9 @@
 import { Box, Typography, Button } from '@mui/material';
 
 function VideoDescription({ title, description, handleVolumeClick }) {
+    description.split('\n').map((item, i) => {
+        return <p key={i}>{item}</p>;
+    });
     return (
         <Box
             bgcolor="#4B8F8C"

@@ -7,7 +7,7 @@ const Menu = (onMenuClick) => {
             <div className="column">
                 <div className="title"><a href="#section1" onClick={onMenuClick}>INSPIRATIONS</a></div>
                     <ul>
-                        <li><a href="#section1-unedited">(UN)EDITED</a></li>
+                        <li><a href="#section1-unedited">UN?EDITED</a></li>
                         <li><a href="#section1-blueHour">BLUE HOUR</a></li>
                         <li><a href="#section1-collage">COLLAGE</a></li>
                     </ul>
