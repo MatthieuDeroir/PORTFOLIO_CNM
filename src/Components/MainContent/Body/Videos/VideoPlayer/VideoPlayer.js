@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import './VideoPlayer.css'; // assuming you have a VideoPlayer.css in the same directory
 
 function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
     const playerRef = useRef(null);
@@ -11,8 +12,6 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
     });
 
     const opts = {
-        height: '390',
-        width: '640',
         playerVars: {
             autoplay: 0,
             controls: 0,
@@ -37,7 +36,14 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
 
     return (
         <ThemeProvider theme={theme}>
-            <YouTube videoId={videoId} opts={opts} onReady={onReady} />
+            <div className="player-wrapper">
+                <YouTube
+                    className="react-player"
+                    videoId={videoId}
+                    opts={opts}
+                    onReady={onReady}
+                />
+            </div>
         </ThemeProvider>
     );
 }

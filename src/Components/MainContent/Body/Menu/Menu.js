@@ -26,9 +26,9 @@ const Menu = (onMenuClick) => {
             <div className="column">
                 <div className="title"><a href="#section4">Practices</a></div>
                 <ul>
-                    <li><a href="#section3-observationalDrawing">Analog drawings</a></li>
-                    <li><a href="#section3-monumental">Digital drawings</a></li>
-                    <li><a href="#section3-welding">Object photography</a></li>
+                    <li><a href="#section3-analogDrawing">Analog drawings</a></li>
+                    <li><a href="#section3-digitalDrawing">Digital drawings</a></li>
+                    <li><a href="#section3-objectPhotography">Object photography</a></li>
                 </ul>
             </div>
         </div>

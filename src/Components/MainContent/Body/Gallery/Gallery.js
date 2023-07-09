@@ -3,6 +3,7 @@ import Section from './Section/Section';
 import {Gallery} from 'react-grid-gallery';
 import CustomGallery from './CustomGallery/CustomGallery';
 import ImageOverlay from './ImageOverlay/ImageOverlay';
+import GalleryWithOverlay from './GalleryWithOverlay/GalleryWithOverlay';
 
 import Unedited from "./Unedited";
 import ImageList from "@mui/material/ImageList";
@@ -10,83 +11,25 @@ import ImageListItem from "@mui/material/ImageListItem";
 
 const GalleryComponent = () => {
 
-    const unedited = [
+    const backstage = [
         {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
-            thumbnailWidth: 4,
-            thumbnailHeight: 4,
-            caption: 'FLOWERPICKING',
-            description: 'DIGITAL COLLAGE \n' +
-                'early 2021\n' +
-                'This flower wasn’t where it should be. \n',
-            customOverlay: <ImageOverlay title='FLOWERPICKING'
-                                         description={'DIGITAL COLLAGE \n early 2021 \n This flower wasn’t where it should be.'}/>
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_1.JPG'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_1.JPG'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'NEWBLUR',
-            description: '',
+            title: 'BACKSTAGE',
+            caption: 'Backstage',
+            description: 'Real flooring, real windows, it took a few weeks to source the materials and create this small room. '
         },
         {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 2,
-            caption: 'GOLDHEAD',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_2.JPG'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_2.JPG'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'UNDERWATER',
-            description: '',
+            title: 'BACKSTAGE',
+            caption: 'Backstage',
+            description: 'A variety of objects represent people throughout the project, glowsticks, cat toys, cotton candy. The colours and textures of these objects evoke symbolical meaning. Cotton candy, like a cloud, reminds us of dreams.'
         },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'REDCURTAIN',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'REDCURTAIN',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'REFLECTIONS',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'SPACEAVOCADO',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'PINKSUN',
-            description: '',
-        }
     ];
 
     const blueHour = [
@@ -95,16 +38,19 @@ const GalleryComponent = () => {
             thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_1.gif'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
+            title: 'BLUEHOUR',
             caption: 'GIF',
-            description: '',
+            description: 'A stop motion wave of pink sand. \n' +
+                'Relaxation, imagination and memories.\n',
         },
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_2.gif'),
             thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_2.gif'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
+            title: 'BLUEHOUR',
             caption: 'GIF',
-            description: '',
+            description: 'A variety of objects represent people throughout the project, glowsticks, cat toys, cotton candy. The colours and textures of these objects evoke symbolical meaning. Cotton candy, like a cloud, reminds us of dreams.',
         },
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_3.gif'),
@@ -112,50 +58,160 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'GIF',
-            description: '',
+            title: 'BLUEHOUR',
+            description: 'Still Dancers, changing lights.',
         },
+        {
+            src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_4.JPG'),
+            thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_4.JPG'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            caption: 'GIF',
+            title: 'BLUEHOUR',
+            description: 'This was shot in the reflection of the window',
+        },
+
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_5.gif'),
             thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_5.gif'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'GIF',
-            description: '',
+            title: 'BLUEHOUR',
+            description: 'Dreaming about nature in the dark',
         },
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_6.gif'),
             thumbnail: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_GIF_6.gif'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
+            title: 'BLUEHOUR',
             caption: 'GIF',
-            description: '',
+            description: 'Our dreams become more personal as our consciousness separates into sleep',
         }
     ]
 
-    const collage = [
+
+    const unedited = [
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_FLOWERPICKING_1.webp'),
+            thumbnailWidth: 4,
+            thumbnailHeight: 4,
+            title: 'FLOWERPICKING',
+            description: 'DIGITAL COLLAGE \n' +
+                'early 2021\n' +
+                'This flower wasn’t where it should be. \n',
+
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_NEWBLUR_2.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'NEWBLUR',
+            description: 'Photograph early 2021 Ø',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_GOLDHEAD_3.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 2,
+            title: 'GOLDHEAD',
+            description: 'Close up photograph of an installation\n' +
+                ' early 2022\n' +
+                ' What is feminine ? Is it natural or artificial ?\n' +
+                'The inspiration is natural but the medium is artificial. \n' +
+                'As I make flowers out of my discarded padding and earrings I learn to let go of the physical objects that I have come to own. \n' +
+                'They are the reflection of that “femininity”. It\'s supposedly harder to buy men gifts.\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_UNDERWATER_4.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'UNDERWATER',
+            description: ' Digital montage\n' +
+                ' late 2021\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_5.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'REDCURTAIN',
+            description: 'Photograph \n' +
+                'Early 2021 Ø \n' +
+                'These photographs were the inspiration for Une heure bleue’s stage design. \n' +
+                'In the morning, through a curtain, through a lens, colour can be so vibrant.\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'REDCURTAIN',
+            description: 'Photograph \n' +
+                'Early 2021 Ø \n' +
+                'These photographs were the inspiration for Une heure bleue’s stage design. \n' +
+                'In the morning, through a curtain, through a lens, colour can be so vibrant.\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'REFLECTIONS',
+            description: 'Photograph Late 2020 Ø \n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'SPACEAVOCADO',
+            description: 'Digital montage \n' +
+                'late 2020\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'PINKSUN',
+            description: 'DIGITAL COLLAGE \n' +
+                'late 2020\n' +
+                'Layering of images is a means of digital journaling. \n' +
+                'The colours hint to the peacefulness of urban escape.\n',
+        }
+    ];
+
+
+    const collages = [
         {
             src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_1.webp'),
             thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_1.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'COLLAGE',
-            description: '',
+            title: '1_1',
+            description: 'Fashion magazine collage on canvas, untitled, 2021\n' +
+                'My usual fascination for the contrast between natural and artificial shows once again\n',
         },
         {
             src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_2.webp'),
             thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_2.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'COLLAGE',
-            description: '',
+            title: '1_2',
+            description: 'Collage on cardstock, untitled, late 2022',
         },
         {
             src: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_3.webp'),
             thumbnail: require('Assets/Images/Art Projects/1_COLLAGE/COLLAGE_1_3.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'COLLAGE',
-            description: '',
+            title: '1_3',
+            description: 'Collage on cardstock,untitled,  late 2022',
         }
     ]
 
@@ -166,6 +222,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'EYES',
+            title: 'EYES',
             description: '',
         },
         {
@@ -174,6 +231,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'EYES',
+            title: '',
             description: '',
         },
         {
@@ -182,6 +240,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'GLASS',
+            title: '',
             description: '',
         },
         {
@@ -190,6 +249,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
+            title: '',
             description: '',
         },
         {
@@ -198,6 +258,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
+            title: '',
             description: '',
         },
         {
@@ -206,6 +267,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
+            title: '',
             description: '',
         },
         {
@@ -214,6 +276,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
+            title: '',
             description: '',
         },
         {
@@ -222,6 +285,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         },
         {
@@ -230,6 +294,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         },
         {
@@ -238,6 +303,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         },
         {
@@ -246,6 +312,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         },
         {
@@ -254,6 +321,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         },
         {
@@ -262,6 +330,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
+            title: '',
             description: '',
         }
     ]
@@ -273,6 +342,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
+            title: '',
             description: '',
         },
         {
@@ -281,6 +351,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
+            title: '',
             description: '',
         },
         {
@@ -289,6 +360,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
+            title: '',
             description: '',
         },
         {
@@ -297,6 +369,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
+            title: '',
             description: '',
         },
         {
@@ -305,6 +378,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
+            title: '',
             description: '',
         },
         {
@@ -313,6 +387,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
+            title: '',
             description: '',
         },
         {
@@ -321,6 +396,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
+            title: '',
             description: '',
         },
         {
@@ -329,6 +405,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
+            title: '',
             description: '',
         },
         {
@@ -337,6 +414,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
+            title: '',
             description: '',
         },
         {
@@ -345,6 +423,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
+            title: '',
             description: '',
         }
     ]
@@ -356,6 +435,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
+            title: '',
             description: '',
         },
         {
@@ -364,6 +444,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
+            title: '',
             description: '',
         },
         {
@@ -372,6 +453,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
+            title: '',
             description: '',
         },
         {
@@ -380,17 +462,19 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
+            title: '',
             description: '',
         }
     ]
 
-    const analogDrawings_Journaling = [
+    const analogDrawings_JOURNALING = [
         {
             src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling.webp'),
             thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_Journaling.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -399,6 +483,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -407,6 +492,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -415,6 +501,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -423,6 +510,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -431,6 +519,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -439,6 +528,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
 
         },
@@ -448,6 +538,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -456,6 +547,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -464,6 +556,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -472,6 +565,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -480,6 +574,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
         {
@@ -488,6 +583,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Journaling',
+            title: '',
             description: '',
         },
     ]
@@ -499,6 +595,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -507,6 +604,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -515,6 +613,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -523,6 +622,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -531,6 +631,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -539,6 +640,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         },
         {
@@ -547,6 +649,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'ME',
+            title: '',
             description: '',
         }
     ]
@@ -558,6 +661,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'PORTRAIT',
+            title: '',
             description: '',
         },
         {
@@ -566,6 +670,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'PORTRAIT',
+            title: '',
             description: '',
         },
         {
@@ -574,6 +679,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'PORTRAIT',
+            title: '',
             description: '',
         },
         {
@@ -582,6 +688,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'PORTRAIT',
+            title: '',
             description: '',
         }
     ]
@@ -593,6 +700,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LIFEDRAWING',
+            title: '',
             description: '',
         },
         {
@@ -601,6 +709,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LIFEDRAWING',
+            title: '',
             description: '',
         },
         {
@@ -609,6 +718,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LIFEDRAWING',
+            title: '',
             description: '',
         },
         {
@@ -617,6 +727,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LIFEDRAWING',
+            title: '',
             description: '',
         }
     ]
@@ -628,6 +739,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -636,6 +748,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -644,6 +757,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -652,6 +766,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -660,6 +775,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -668,6 +784,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -676,6 +793,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -684,6 +802,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -692,6 +811,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         },
         {
@@ -700,6 +820,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'CHARACTERS',
+            title: '',
             description: '',
         }
     ]
@@ -710,6 +831,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -718,6 +840,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -726,6 +849,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -734,6 +858,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -742,6 +867,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -750,6 +876,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -758,6 +885,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         },
         {
@@ -766,6 +894,7 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'OBJECTPHOTOGRAPHY',
+            title: '',
             description: '',
         }
     ]
@@ -774,205 +903,78 @@ const GalleryComponent = () => {
     return (
         <div className="gallery">
             <h1>INSPIRATIONS</h1>
-            <div >
+            <section id="#section1-blueHour">
+
                 <h2>BLUE HOUR</h2>
-                <div style={{ justifyContent: 'center !important' }}>
-                    {/*<CustomGallery*/}
-                    {/*    images={blueHour}*/}
-                    {/*    enableImageSelection={false}*/}
-                    {/*    rowHeight={500}*/}
-                    {/*    margin={10}*/}
-                    {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
-                    {/*/>*/}
+                <p>
+                    Early 2023
+                </p>
+                <GalleryWithOverlay images={blueHour}/>
+                <h2>Backstage</h2>
+                <p>Words and drawings both help keep track of a blooming idea.
 
-                    {/*<Gallery*/}
-                    {/*    images={blueHour}*/}
-                    {/*    enableImageSelection={false}*/}
-                    {/*    rowHeight={window.innerHeight * 0.5}*/}
-                    {/*    margin={10}*/}
-                    {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
-                    {/*    lightboxWidth={window.innerWidth * 0.9}*/}
+                    Une Heure Bleue went through multiple changes before coming to completion.
+                    Starting from a window-based stage design and the idea of the bubble shot, the images are both inspired by the narrative basis for the project and the available materials.
 
-                    {/*/>*/}
-
-                    <ImageList variant="masonry" cols={2} gap={8}>
-                        {blueHour.map((item) => (
-                            <ImageListItem key={item.img}>
-                                <img
-                                    src={`${item.src}`}
-                                    srcSet={`${item.src}`}
-                                    alt={item.title}
-                                    loading="lazy"
-                                />
-                            </ImageListItem>
-                        ))}
-                    </ImageList>
-                </div>
-
-            </div>
+                    Ideas for dialog and a more character based video were explored, but the intention of blue hour is to remind us of that time rather than show it.</p>
+                    <GalleryWithOverlay images={backstage}/>
+            </section>
             <div>
                 <h2>UN?EDITED</h2>
-                {/*<Gallery*/}
-                {/*    images={unedited}*/}
-                {/*    enableImageSelection={false}*/}
-                {/*    rowHeight={600}*/}
-                {/*    margin={10}*/}
-                {/*    lightboxWidth={1000}*/}
-                {/*/>*/}
+                <p>
+                    This collection of images, both edited and unedited are a play on what visual queues we recognise as
+                    artificial. Colours, textures and shapes and even composition can all indicate editing, here I play
+                    with colour and light to blur the origins of sometimes untouched images. I've translated this
+                    process in my video clip "I have these videos".
+                    The mention Ø points to the lack of any digital editing. Not all mysteries/processes will be
+                    explained.
+                </p>
+                <GalleryWithOverlay images={unedited}/>
+            </div>
+            <div>
+                <h2>COLLAGES</h2>
+                <p>
 
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {unedited.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-                {/*<CustomGallery*/}
-                {/*    images={unedited}*/}
-                {/*    enableImageSelection={false}*/}
-                {/*    rowHeight={window.innerHeight * 0.5}*/}
-                {/*    margin={10}*/}
-                {/*    defaultContainerWidth={window.innerWidth * 0.9}*/}
-                {/*/>*/}
+                </p>
+                <GalleryWithOverlay images={collages}/>
             </div>
             <h1>Inspiration</h1>
             <div>
                 <h2>Angels</h2>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {angels.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <p>Angels are a collection of affectionately created small sculptures. The variety of these figures
+                    represents the plurality of the symbols I relate to angels.
+                    This series is ongoing and started in 2022, through the sacralisation of a broken bracelet. The main
+                    body of Angels are air-dry clay but materials vary revealing every angel's individuality.
+                </p>
+                <GalleryWithOverlay images={angels}/>
             </div>
             <div>
                 <h2>Durable Materials</h2>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {durableMaterials.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={durableMaterials}/>
 
             </div>
             <div>
                 <h2>Mother Nature is on my mind</h2>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {motherNature.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={motherNature}/>
             </div>
             <h1>Practices</h1>
             <div>
                 <h2>Analog drawings</h2>
                 <h3>Journaling</h3>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {analogDrawings_Journaling.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={analogDrawings_JOURNALING}/>
                 <h3>Self-Portaits</h3>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {analogDrawings_ME.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={analogDrawings_ME}/>
                 <h3>Life Drawing</h3>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {analogDrawings_PORTRAIT.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {analogDrawings_LIFEDRAWING.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-
-
+                <GalleryWithOverlay images={analogDrawings_PORTRAIT}/>
+                <GalleryWithOverlay images={analogDrawings_LIFEDRAWING}/>
             </div>
             <div>
                 <h2>Digital drawings</h2>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {digitalDrawings.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={digitalDrawings}/>
             </div>
             <div>
                 <h2>Object photography</h2>
-                <ImageList variant="masonry" cols={2} gap={8}>
-                    {objectPhotography.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.src}`}
-                                srcSet={`${item.src}`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                <GalleryWithOverlay images={objectPhotography}/>
             </div>
         </div>
     );
