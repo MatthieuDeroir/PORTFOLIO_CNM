@@ -10,7 +10,7 @@ function Overlay({onOverlayClick, titleMoved, transparent}) {
     return (
         <div className={overlayClass} onClick={onOverlayClick}>
 
-            <h1 className={titleClass}>CAMILLE NAJMA MARIE</h1>
+            {/*<h1 className={titleClass}>CAMILLE NAJMA MARIE</h1>*/}
             <div className="overlay-content">
                 <div className="overlay-text">
                     <p>"It’s with an investigative excitement and a microcosmic lens that Camille approaches her
