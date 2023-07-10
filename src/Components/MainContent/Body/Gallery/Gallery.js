@@ -154,6 +154,24 @@ const GalleryComponent = () => {
                 'These photographs were the inspiration for Une heure bleue’s stage design. \n' +
                 'In the morning, through a curtain, through a lens, colour can be so vibrant.\n',
         },
+
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'SPACEAVOCADO',
+            description: 'Digital montage \n' +
+                'late 2020\n',
+        },
+        {
+            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: 'REFLECTIONS',
+            description: 'Photograph Late 2020 Ø \n',
+        },
         {
             src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
             thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REDCURTAIN_6.webp'),
@@ -165,23 +183,7 @@ const GalleryComponent = () => {
                 'These photographs were the inspiration for Une heure bleue’s stage design. \n' +
                 'In the morning, through a curtain, through a lens, colour can be so vibrant.\n',
         },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_REFLECTIONS_7.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            title: 'REFLECTIONS',
-            description: 'Photograph Late 2020 Ø \n',
-        },
-        {
-            src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
-            thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_SPACEAVOCADO_8.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            title: 'SPACEAVOCADO',
-            description: 'Digital montage \n' +
-                'late 2020\n',
-        },
+
         {
             src: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
             thumbnail: require('Assets/Images/Art Projects/1_UNEDITED/UNEDITED_1_PINKSUN_9.webp'),
@@ -672,24 +674,24 @@ const GalleryComponent = () => {
             title: '',
             description: '',
         },
-        {
-            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
-            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'ME',
-            title: '',
-            description: '',
-        },
-        {
-            src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
-            thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
-            thumbnailWidth: 2,
-            thumbnailHeight: 4,
-            caption: 'ME',
-            title: '',
-            description: '',
-        }
+        // {
+        //     src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
+        //     thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_6.webp'),
+        //     thumbnailWidth: 2,
+        //     thumbnailHeight: 4,
+        //     caption: 'ME',
+        //     title: '',
+        //     description: '',
+        // },
+        // {
+        //     src: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
+        //     thumbnail: require('Assets/Images/Art Projects/3_ANALOGDRAWINGS/REFERENCES_3_ME_7.webp'),
+        //     thumbnailWidth: 2,
+        //     thumbnailHeight: 4,
+        //     caption: 'ME',
+        //     title: '',
+        //     description: '',
+        // }
     ]
 
     const analogDrawings_PORTRAIT = [
@@ -940,10 +942,9 @@ const GalleryComponent = () => {
 
     return (
         <div className="gallery">
-            <h1>INSPIRATIONS</h1>
-            <section id="#section1-blueHour">
+            <h1 id="section1">INSPIRATIONS</h1>
 
-                <h2>BLUE HOUR</h2>
+                <h2 id="blueHour">BLUE HOUR</h2>
                 <p>
                     Early 2023
                 </p>
@@ -959,9 +960,8 @@ const GalleryComponent = () => {
                     Ideas for dialog and a more character based video were explored, but the intention of blue hour is
                     to remind us of that time rather than show it.</p>
                 <GalleryWithOverlay images={backstage}/>
-            </section>
             <div>
-                <h2>UN?EDITED</h2>
+                <h2 id={"unedited"}>UN?EDITED</h2>
                 <p>
                     This collection of images, both edited and unedited are a play on what visual queues we recognise as
                     artificial. Colours, textures and shapes and even composition can all indicate editing, here I play
@@ -973,15 +973,15 @@ const GalleryComponent = () => {
                 <GalleryWithOverlay images={unedited}/>
             </div>
             <div>
-                <h2>COLLAGES</h2>
+                <h2 id="collages">COLLAGES</h2>
                 <p>
 
                 </p>
                 <GalleryWithOverlay images={collages}/>
             </div>
-            <h1>Inspiration</h1>
+            <h1 id="section2">Inspiration</h1>
             <div>
-                <h2>Angels</h2>
+                <h2 id="angels">Angels</h2>
                 <p>Angels are a collection of affectionately created small sculptures. The variety of these figures
                     represents the plurality of the symbols I relate to angels.
                     This series is ongoing and started in 2022, through the sacralisation of a broken bracelet. The main
@@ -990,12 +990,12 @@ const GalleryComponent = () => {
                 <GalleryWithOverlay images={angels}/>
             </div>
             <div>
-                <h1>
+                <h1 id="durable-materials">
                     <i>Durable Materials</i>
                 </h1>
                 <h2>Church and Mountain</h2>
                 <GalleryWithOverlay images={churchAndMountain}/>
-                <h2>Camaïeu</h2>
+                <h2 >Camaïeu</h2>
                 <p>Stained-glass and mirror, Early 2022, A camaïeu is the use of multiple shades of the same colour to
                     create a composition.
                     Recycling stained glass like a puzzle, I trained myself to weld glass together in tricky imperfect
@@ -1006,16 +1006,16 @@ const GalleryComponent = () => {
                 <GalleryWithOverlay images={camaieu}/>
             </div>
             <div>
-                <h2>Mother Nature is on my mind</h2>
+                <h2 id="mother-nature">Mother Nature is on my mind</h2>
                 <p>Watercolour is a medium I enjoy because it guides you, I surrender part of my control to the water.
                     This has made this medium an intuitive expressive one for me, however I also enjoy the transparent
                     quality of watercolour for colouring of sketches.</p>
                 <GalleryWithOverlay images={motherNature}/>
             </div>
-            <h1>Practices</h1>
+            <h1 id="section3">Practices</h1>
             <div>
-                <h2>Analog drawings</h2>
-                <h3>Journaling</h3>
+                <h2 id="analog-drawings">Analog drawings</h2>
+                <h3 >Journaling</h3>
                 <GalleryWithOverlay images={analogDrawings_JOURNALING}/>
 
                 <h3 style={{textAlign: "start", marginLeft: '10px'}}>Life Drawing</h3>
@@ -1023,11 +1023,11 @@ const GalleryComponent = () => {
                 <GalleryWithOverlay images={analogDrawings_LIFEDRAWING}/>
             </div>
             <div>
-                <h2>Digital drawings</h2>
+                <h2 id="digital-drawings">Digital drawings</h2>
                 <GalleryWithOverlay images={digitalDrawings}/>
             </div>
             <div>
-                <h2>Object photography</h2>
+                <h2 id="object-photography">Object photography</h2>
                 <GalleryWithOverlay images={objectPhotography}/>
             </div>
             <div>

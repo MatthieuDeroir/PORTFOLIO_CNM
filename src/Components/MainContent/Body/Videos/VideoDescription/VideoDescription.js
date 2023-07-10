@@ -18,7 +18,7 @@ function VideoDescription({ title, description, handleVolumeClick }) {
             box-shadow="0 0 5px black"
         >
             <div>
-                <Typography variant="h4" fontFamily="'Eina04-Light', sans-serif">{title}</Typography>
+                <Typography variant="h3" fontFamily="'Eina04-Light', sans-serif">{title}</Typography>
                 {lines.map((line, index) => (
                     <Typography key={index} variant="body1" fontFamily="'Eina04-Light', sans-serif" >{line}</Typography>
                 ))}
