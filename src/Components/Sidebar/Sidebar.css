@@ -24,13 +24,13 @@
     height: calc(100% / 5);
 }
 .color-1 {
-    background: #4B8F8C;
-    box-shadow: 0 0 5px #4B8F8C !important;
+    background: #2D232E;
+    box-shadow: 0 0 5px #2D232E !important;
 }
 
 .color-2 {
-    background: #2D232E;
-    box-shadow: 0 0 5px #2D232E !important;
+    background: #4B8F8C;
+    box-shadow: 0 0 5px #4B8F8C !important;
 }
 
 .color-3 {

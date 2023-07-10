@@ -45,7 +45,7 @@ function Sidebar() {
         const inverseProgress = 1 - progressWithinRange;
 
         let brightness = index === visibleIndex ? inverseProgress : index === visibleIndex - 1 ? progressWithinRange : 1;
-        brightness = Math.max(brightness, 0.5); // Réglez ici le seuil de luminosité minimum
+        brightness = Math.max(brightness, 1); // Réglez ici le seuil de luminosité minimum
 
         const rgbColor = hexToRgb(color);
         const r = Math.min(Math.floor(rgbColor.r * brightness), 255);
@@ -57,8 +57,8 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            <div className="color-block" style={{backgroundColor: calculateColor('#4B8F8C', 0)}}></div>
-            <div className="color-block" style={{backgroundColor: calculateColor('#2D232E', 1)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#2D232E', 0)}}></div>
+            <div className="color-block" style={{backgroundColor: calculateColor('#4B8F8C', 1)}}></div>
             <div className="color-block" style={{backgroundColor: calculateColor('#F5DD90', 2)}}></div>
             <div className="color-block" style={{backgroundColor: calculateColor('#D3C1D2', 3)}}></div>
             <div className="color-block" style={{backgroundColor: calculateColor('#FFE2FE', 4)}}></div>
