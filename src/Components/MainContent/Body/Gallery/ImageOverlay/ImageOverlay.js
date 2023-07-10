@@ -8,6 +8,8 @@ function ImageOverlay({ title, description, isVisible }) {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 color: 'white',
                 padding: '10px',
+                height: '100%',
+                overflow: 'auto',
                 position: 'absolute',
                 bottom: '0',
                 left: '0',

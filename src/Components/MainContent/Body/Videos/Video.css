@@ -19,6 +19,17 @@
     position: relative;
 }
 
+.centered-description {
+    text-align: center;
+}
+
+.square-video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%; /* makes it square */
+}
+
 
 .video-placeholder {
     position: absolute;

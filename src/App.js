@@ -5,7 +5,6 @@ import Body from './Components/MainContent/Body/Body';
 import Footer from './Components/MainContent/Footer/Footer';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import ThemeContext from './Assets/Themes/ThemeContext'; // Assurez-vous d'importer le ThemeContext correctement
-// import bgImage from '../public/Images/bg.webp';
 import Cursor from './Components/Cursor/Cursor';
 import Sidebar from "./Components/Sidebar/Sidebar";
 import MainContent from "./Components/MainContent/MainContent";
@@ -15,10 +14,11 @@ import Fonts from "./Assets/Fonts/Fonts.css";
 import './App.css';
 
 function App() {
-    //Overlay Configuration
     const [isOverlayVisible, setIsOverlayVisible] = useState(true);
     const [titleMoved, setTitleMoved] = useState(false);
     const [overlayTransparent, setOverlayTransparent] = useState(false);
+    const [darkMode, setDarkMode] = useState(false);
+    const [menuClicked, setMenuClicked] = useState(false);
 
     const handleOverlayClick = () => {
         setOverlayTransparent(true);
@@ -28,9 +28,6 @@ function App() {
         }, 1000);
     };
 
-    //Mode
-    const [darkMode, setDarkMode] = useState(false);
-
     const theme = createTheme({
         palette: {
             mode: darkMode ? 'dark' : 'light',
@@ -38,8 +35,6 @@ function App() {
     });
 
     const toggleTheme = () => setDarkMode(!darkMode);
-
-    const [menuClicked, setMenuClicked] = useState(false);
 
     useEffect(() => {
         document.body.style.overflow = menuClicked ? "auto" : "auto";
@@ -57,10 +52,10 @@ function App() {
                 <ThemeProvider theme={theme}>
                     <Cursor />
                     <Grid container>
-                        <Grid item xs={1}>
+                        <Grid item xs={12} md={1}>
                             <Sidebar />
                         </Grid>
-                        <Grid item xs={11} container justifyContent="center" alignItems="center">
+                        <Grid item xs={12} md={11} container justifyContent="center" alignItems="center">
                             <MainContent onMenuClick={handleMenuClick}/>
                         </Grid>
                     </Grid>

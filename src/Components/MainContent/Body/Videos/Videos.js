@@ -60,13 +60,20 @@ export default function Videos() {
     return (
         <div className="video">
             <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+                <div className={'centered-description'}>
+
+                <Grid item xs={6} md={6}>
+
                     <VideoDescription
                         description={videos[value].description}
                         handleVolumeClick={handleVolumeClick}
                     />
+
                 </Grid>
-                <Grid item xs={12} md={6}>
+                </div>
+
+
+                <Grid item xs={6} md={6}>
                     <div className="video-container">
                         <div className="tab-container">
                             <Tabs value={value} onChange={handleChange}>
@@ -80,7 +87,7 @@ export default function Videos() {
                             </Tabs>
                         </div>
                         <div className="video-container">
-                            <div className="video-placeholder" />
+                            <div className="video-placeholder square-video" />
                             <VideoPlayer videoId={videos[value].id} isMuted={isMuted}/>
                         </div>
 
@@ -91,5 +98,7 @@ export default function Videos() {
 
     );
 }
+
+
 
 

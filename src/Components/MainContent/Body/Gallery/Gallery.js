@@ -19,7 +19,16 @@ const GalleryComponent = () => {
             thumbnailHeight: 4,
             title: 'BACKSTAGE',
             caption: 'Backstage',
-            description: 'Real flooring, real windows, it took a few weeks to source the materials and create this small room. '
+            description: 'Real flooring, real windows and artificial lights, it took a few weeks to source the materials and create this small room. '
+        },
+        {
+            src: require('Assets/Images/white.avif'),
+            thumbnail: require('Assets/Images/white.avif'),
+            thumbnailWidth: 2,
+            thumbnailHeight: 4,
+            title: '',
+            caption: 'Backstage',
+            description:'',
         },
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_2.JPG'),
@@ -182,7 +191,7 @@ const GalleryComponent = () => {
             description: 'DIGITAL COLLAGE \n' +
                 'late 2020\n' +
                 'Layering of images is a means of digital journaling. \n' +
-                'The colours hint to the peacefulness of urban escape.\n',
+                'The colours hint to the peacefulness of urban escapism.\n',
         }
     ];
 
@@ -222,8 +231,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'EYES',
-            title: 'EYES',
-            description: '',
+            title: 'EYES :',
+            description: 'small sculpture, Late 2021, \nA broken bracelet with many eyes, a bit of clay, wire and two pearls shape a delicate, white creature. The biblical mention of Angels having many eyes is what sparked the concept for this collection.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_EYES_2.webp'),
@@ -231,8 +240,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'EYES',
-            title: '',
-            description: '',
+            title: 'EYES :',
+            description: 'small sculpture, Late 2021, \nA broken bracelet with many eyes, a bit of clay, wire and two pearls shape a delicate, white creature. The biblical mention of Angels having many eyes is what sparked the concept for this collection.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_GLASS_1.webp'),
@@ -240,8 +249,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'GLASS',
-            title: '',
-            description: '',
+            title: 'GLASS :',
+            description: 'glass painting, Early 2022, \nInspired by ancient cave paintings, this sun god turned love angel lives peacefully among animals and nature. The spiritual inspiration and the history of stained glass make this object liturgical to me.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_1.webp'),
@@ -249,8 +258,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
-            title: '',
-            description: '',
+            title: 'LOVE :',
+            description: 'glass painting, Early 2022,\nInspired by ancient cave paintings, this sun god turned love angel lives peacefully among animals and nature. The spiritual inspiration and the history of stained-glass make this object liturgical to me.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_2.webp'),
@@ -258,8 +267,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
-            title: '',
-            description: '',
+            title: 'LOVE :',
+            description: 'small sculpture, Mid 2022, \nClay and fabric collaborate to create a comforting angel. Monstrous eye tentacle contrast with soft wings and a halo underlines the moral goodness of the creature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_3.webp'),
@@ -267,8 +276,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
-            title: '',
-            description: '',
+            title: 'LOVE :',
+            description: 'small sculpture, Mid 2022, \nClay and fabric collaborate to create a comforting angel. Monstrous eye tentacle contrast with soft wings and a halo underlines the moral goodness of the creature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_LOVE_4.webp'),
@@ -276,8 +285,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'LOVE',
-            title: '',
-            description: '',
+            title: 'LOVE :',
+            description: 'small sculpture, Mid 2022, \nClay and fabric collaborate to create a comforting angel. Monstrous eye tentacle contrast with soft wings and a halo underlines the moral goodness of the creature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_1.webp'),
@@ -285,8 +294,11 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.\n',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_2.webp'),
@@ -294,8 +306,11 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_4.webp'),
@@ -303,8 +318,11 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_5.webp'),
@@ -312,8 +330,11 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_6.webp'),
@@ -321,8 +342,11 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.',
         },
         {
             src: require('Assets/Images/Art Projects/2_ANGELS/ANGELS_1_NATURE_7.webp'),
@@ -330,20 +354,23 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'NATURE',
-            title: '',
-            description: '',
+            title: 'NATURE :',
+            description: 'small sculpture on canvas base, Early 2023, \nI divert from my white colour palette to create a more organic angel.\n' +
+                'Red clay evokes the creation of man, as such this angel is closer to a human than the other ones.  \n' +
+                'By entering a more material world this angel feels pain. This pain is both a personal catharsis and a comment on ecological catastrophes worldwide. \n' +
+                'Artificial materials such as gemstones and plastic leaves are a cynical comment on my desire to honour nature.',
         }
     ]
 
-    const durableMaterials = [
+    const churchAndMountain = [
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_1.webp'),
             thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_1.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
-            title: '',
-            description: '',
+            title: 'Church and Mountain :',
+            description: 'stained-glass objects, Early 2022, \nA church and a mountain, two timeless places. These two little objects create a scenery, like a miniature stage design.',
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_2.webp'),
@@ -351,8 +378,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
-            title: '',
-            description: '',
+            title: 'Church and Mountain :',
+            description: 'stained-glass objects, Early 2022, \nA church and a mountain, two timeless places. These two little objects create a scenery, like a miniature stage design.',
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_3.webp'),
@@ -360,8 +387,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
-            title: '',
-            description: '',
+            title: 'Church and Mountain :',
+            description: 'stained-glass objects, Early 2022, \nA church and a mountain, two timeless places. These two little objects create a scenery, like a miniature stage design.',
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_4.webp'),
@@ -369,8 +396,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
-            title: '',
-            description: '',
+            title: 'Church and Mountain :',
+            description: 'stained-glass objects, Early 2022, \nA church and a mountain, two timeless places. These two little objects create a scenery, like a miniature stage design.',
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Churchandmountain_2_5.webp'),
@@ -378,16 +405,19 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Church and Mountain',
-            title: '',
-            description: '',
+            title: 'Church and Mountain :',
+            description: 'stained-glass objects, Early 2022, \nA church and a mountain, two timeless places. These two little objects create a scenery, like a miniature stage design.',
         },
+    ]
+
+    const camaieu = [
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_1.webp'),
             thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_1.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'Camaieu',
-            title: '',
+            caption: 'Camaïeu',
+            title: 'Camaïeu',
             description: '',
         },
         {
@@ -395,18 +425,20 @@ const GalleryComponent = () => {
             thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_2.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'Camaieu',
-            title: '',
+            caption: 'Camaïeu',
+            title: 'Camaïeu',
             description: '',
+
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_3.webp'),
             thumbnail: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_3.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
-            caption: 'Camaieu',
-            title: '',
+            caption: 'Camaïeu',
+            title: 'Camaïeu',
             description: '',
+
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_4.webp'),
@@ -414,8 +446,9 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
-            title: '',
+            title: 'Camaïeu',
             description: '',
+
         },
         {
             src: require('Assets/Images/Art Projects/2_DURABLEMATERIALS/Camaieu_ 2_5.webp'),
@@ -423,10 +456,12 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Camaieu',
-            title: '',
+            title: 'Camaïeu',
             description: '',
-        }
+
+        },
     ]
+
 
     const motherNature = [
         {
@@ -435,8 +470,9 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: '',
-            description: '',
+            title: 'Le vent sur nos corps d’arbres :',
+            description: 'watercolour, early 2022, \n' +
+                'Organic but vibrant colours draw “The wind on our body trees”,\n',
         },
         {
             src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
@@ -444,8 +480,9 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: '',
-            description: '',
+            title: 'Mother Nature is on my mind',
+            description: 'watercolour, early 2022,\n' +
+                '\tWind and Fire draw dynamic lines, like the arms of nature controlling the elements.\n',
         },
         {
             src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_3.webp'),
@@ -453,8 +490,9 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: '',
-            description: '',
+            title: 'Sometimes it rains',
+            description: 'watercolour, early 2022,\n' +
+                '\tSometimes it rains is both a physical and an emotional reality.\n',
         },
         {
             src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
@@ -462,8 +500,8 @@ const GalleryComponent = () => {
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: '',
-            description: '',
+            title: 'Is this a Shrimp ? ',
+            description: ' watercolour, 2020',
         }
     ]
 
@@ -909,15 +947,18 @@ const GalleryComponent = () => {
                 <p>
                     Early 2023
                 </p>
+
                 <GalleryWithOverlay images={blueHour}/>
                 <h2>Backstage</h2>
                 <p>Words and drawings both help keep track of a blooming idea.
 
                     Une Heure Bleue went through multiple changes before coming to completion.
-                    Starting from a window-based stage design and the idea of the bubble shot, the images are both inspired by the narrative basis for the project and the available materials.
+                    Starting from a window-based stage design and the idea of the bubble shot, the images are both
+                    inspired by the narrative basis for the project and the available materials.
 
-                    Ideas for dialog and a more character based video were explored, but the intention of blue hour is to remind us of that time rather than show it.</p>
-                    <GalleryWithOverlay images={backstage}/>
+                    Ideas for dialog and a more character based video were explored, but the intention of blue hour is
+                    to remind us of that time rather than show it.</p>
+                <GalleryWithOverlay images={backstage}/>
             </section>
             <div>
                 <h2>UN?EDITED</h2>
@@ -949,12 +990,26 @@ const GalleryComponent = () => {
                 <GalleryWithOverlay images={angels}/>
             </div>
             <div>
-                <h2>Durable Materials</h2>
-                <GalleryWithOverlay images={durableMaterials}/>
-
+                <h1>
+                    <i>Durable Materials</i>
+                </h1>
+                <h2>Church and Mountain</h2>
+                <GalleryWithOverlay images={churchAndMountain}/>
+                <h2>Camaïeu</h2>
+                <p>Stained-glass and mirror, Early 2022, A camaïeu is the use of multiple shades of the same colour to
+                    create a composition.
+                    Recycling stained glass like a puzzle, I trained myself to weld glass together in tricky imperfect
+                    ways.
+                    As this meditative process happened over the course of a few weeks, the war broke out in Ukraine.
+                    Two pieces do not match the palette, I express my opinion in a seemingly quiet piece.
+                </p>
+                <GalleryWithOverlay images={camaieu}/>
             </div>
             <div>
                 <h2>Mother Nature is on my mind</h2>
+                <p>Watercolour is a medium I enjoy because it guides you, I surrender part of my control to the water.
+                    This has made this medium an intuitive expressive one for me, however I also enjoy the transparent
+                    quality of watercolour for colouring of sketches.</p>
                 <GalleryWithOverlay images={motherNature}/>
             </div>
             <h1>Practices</h1>
@@ -962,9 +1017,8 @@ const GalleryComponent = () => {
                 <h2>Analog drawings</h2>
                 <h3>Journaling</h3>
                 <GalleryWithOverlay images={analogDrawings_JOURNALING}/>
-                <h3>Self-Portaits</h3>
-                <GalleryWithOverlay images={analogDrawings_ME}/>
-                <h3>Life Drawing</h3>
+
+                <h3 style={{textAlign: "start", marginLeft: '10px'}}>Life Drawing</h3>
                 <GalleryWithOverlay images={analogDrawings_PORTRAIT}/>
                 <GalleryWithOverlay images={analogDrawings_LIFEDRAWING}/>
             </div>
@@ -975,6 +1029,10 @@ const GalleryComponent = () => {
             <div>
                 <h2>Object photography</h2>
                 <GalleryWithOverlay images={objectPhotography}/>
+            </div>
+            <div>
+                <h3>Self-Portaits</h3>
+                <GalleryWithOverlay images={analogDrawings_ME}/>
             </div>
         </div>
     );

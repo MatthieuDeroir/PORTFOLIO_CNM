@@ -28,6 +28,10 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
         }
     };
 
+    // let toggleVolumeAndTheme = () => {
+    //     toggleVolumeAndTheme();
+    // }
+
     useEffect(() => {
         if (playerRef.current) {
             isMuted ? playerRef.current.mute() : playerRef.current.unMute();
@@ -42,6 +46,7 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
                     videoId={videoId}
                     opts={opts}
                     onReady={onReady}
+                    onPlay={toggleVolumeAndTheme}
                 />
             </div>
         </ThemeProvider>
