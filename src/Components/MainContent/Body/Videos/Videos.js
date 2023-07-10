@@ -60,19 +60,12 @@ export default function Videos() {
     return (
         <div className="video">
             <Grid container spacing={2}>
-                <div className={'centered-description'}>
-
                 <Grid item xs={6} md={6}>
-
                     <VideoDescription
                         description={videos[value].description}
                         handleVolumeClick={handleVolumeClick}
                     />
-
                 </Grid>
-                </div>
-
-
                 <Grid item xs={6} md={6}>
                     <div className="video-container">
                         <div className="tab-container">

@@ -24,8 +24,8 @@
     position: fixed !important;
     top: 20px !important;
     right: 20px !important;
-    background: #D3C1D2;
-    color: white;
+    background: #4f004f;
+    color: #4f004f;
     z-index: 1000;
     font-size: 2em;
 }

@@ -38,7 +38,7 @@ function MainContent({ onMenuClick }) {
             <div className="content">
                 <Body onMenuClick={onMenuClick}/>
                 <Footer/>
-                <ScrollToTopButton />  // Here's the button
+                <ScrollToTopButton />
             </div>
         </div>
     );

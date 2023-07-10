@@ -5,8 +5,8 @@ export default function Contact() {
         <div className="contact">
             <h4>Contacts</h4>
             <ul>
-                <li>Instagram</li>
-                <li>LinkedIn</li>
+                <li><a href="https://www.instagram.com/najmille/">Instagram</a></li>
+                <li ><a href="https://www.linkedin.com/in/camille-d-aboville-04a58b123">LinkedIn</a></li>
             </ul>
         </div>
     );

@@ -477,15 +477,15 @@ const GalleryComponent = () => {
                 'Organic but vibrant colours draw “The wind on our body trees”,\n',
         },
         {
-            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
-            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: 'Mother Nature is on my mind',
-            description: 'watercolour, early 2022,\n' +
-                '\tWind and Fire draw dynamic lines, like the arms of nature controlling the elements.\n',
+            title: 'Is this a Shrimp ? ',
+            description: ' watercolour, 2020',
         },
+
         {
             src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_3.webp'),
             thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_3.webp'),
@@ -496,15 +496,17 @@ const GalleryComponent = () => {
             description: 'watercolour, early 2022,\n' +
                 '\tSometimes it rains is both a physical and an emotional reality.\n',
         },
+
         {
-            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
-            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_4.webp'),
+            src: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
+            thumbnail: require('Assets/Images/Art Projects/2_MOTHERNATURE/MotherNature_2_2.webp'),
             thumbnailWidth: 2,
             thumbnailHeight: 4,
             caption: 'Mother Nature',
-            title: 'Is this a Shrimp ? ',
-            description: ' watercolour, 2020',
-        }
+            title: 'Mother Nature is on my mind',
+            description: 'watercolour, early 2022,\n' +
+                '\tWind and Fire draw dynamic lines, like the arms of nature controlling the elements.\n',
+        },
     ]
 
     const analogDrawings_JOURNALING = [
@@ -967,6 +969,8 @@ const GalleryComponent = () => {
                     artificial. Colours, textures and shapes and even composition can all indicate editing, here I play
                     with colour and light to blur the origins of sometimes untouched images. I've translated this
                     process in my video clip "I have these videos".
+                    </p>
+                <p>
                     The mention Ø points to the lack of any digital editing. Not all mysteries/processes will be
                     explained.
                 </p>

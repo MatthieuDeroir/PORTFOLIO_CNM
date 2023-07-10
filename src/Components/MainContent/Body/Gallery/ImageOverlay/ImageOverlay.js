@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-function ImageOverlay({ title, description, isVisible }) {
+function ImageOverlay({ title, description, isVisible, borderRadius }) {
     const lines = description.split('\n');
 
     return (
@@ -14,6 +14,7 @@ function ImageOverlay({ title, description, isVisible }) {
                 bottom: '0',
                 left: '0',
                 right: '0',
+                borderRadius: borderRadius ? '1%' : '0',
                 visibility: isVisible ? 'visible' : 'hidden',
             }}
         >
