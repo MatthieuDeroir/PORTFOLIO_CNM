@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "@mui/material/Modal";
 import "./Title.css";
+import Overlay from "../../../../Overlay/Overlay";
 
 export default function Title() {
     const [open, setOpen] = useState(false);
@@ -20,9 +21,9 @@ export default function Title() {
             <h1 className="main-page-title" onClick={handleOpen}>
                 <span className="main-page-title-first">P</span><span className="main-page-title-rest">lural Inspirations</span>
             </h1>
-            <Modal open={open} onClose={handleClose}>
+            <Modal open={open} onClick={handleClose}>
                 <div>
-                    {gif && <img src={gif} alt="Random Gif" />}
+                    <Overlay/>
                 </div>
             </Modal>
         </div>
