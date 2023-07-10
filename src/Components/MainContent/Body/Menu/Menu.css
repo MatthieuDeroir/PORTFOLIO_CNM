@@ -8,6 +8,7 @@
     display: flex;
     background-color: #2D232E; /* Ajoute une couleur de fond au menu */
     margin: 20px;
+    border-radius: 10px;
 }
 
 .menu a {

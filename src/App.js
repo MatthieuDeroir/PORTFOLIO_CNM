@@ -4,7 +4,7 @@ import Header from './Components/MainContent/Header/Header';
 import Body from './Components/MainContent/Body/Body';
 import Footer from './Components/MainContent/Footer/Footer';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
-import ThemeContext from './Assets/Themes/ThemeContext'; // Assurez-vous d'importer le ThemeContext correctement
+import ThemeContext from './Assets/Themes/ThemeContext';
 import Cursor from './Components/Cursor/Cursor';
 import Sidebar from "./Components/Sidebar/Sidebar";
 import MainContent from "./Components/MainContent/MainContent";
@@ -19,6 +19,20 @@ function App() {
     const [overlayTransparent, setOverlayTransparent] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
     const [menuClicked, setMenuClicked] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const colors = ['var(--color-1)', 'var(--color-2)', 'var(--color-3)', 'var(--color-4)', 'var(--color-5)'];
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        setScrollPosition(window.pageYOffset);
+    };
 
     const handleOverlayClick = () => {
         setOverlayTransparent(true);
@@ -44,8 +58,14 @@ function App() {
         setMenuClicked(true);
     };
 
+    const getColor = () => {
+        console.log("d")
+        const colorIndex = Math.floor((scrollPosition / window.innerHeight) % colors.length);
+        return colors[colorIndex];
+    };
+
     return (
-        <div className="App">
+        <div className="App" style={{ backgroundColor: getColor() }}>
             {isOverlayVisible &&
                 <Overlay onOverlayClick={handleOverlayClick} titleMoved={titleMoved} transparent={overlayTransparent}/>}
             <ThemeContext.Provider value={toggleTheme}>

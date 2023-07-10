@@ -14,7 +14,7 @@ function ImageOverlay({ title, description, isVisible, borderRadius }) {
                 bottom: '0',
                 left: '0',
                 right: '0',
-                borderRadius: borderRadius ? '1%' : '0',
+                borderRadius: '1%',
                 visibility: isVisible ? 'visible' : 'hidden',
             }}
         >

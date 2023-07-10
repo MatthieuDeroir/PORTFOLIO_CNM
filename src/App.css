@@ -55,6 +55,15 @@ h1, h2, h3, h4, h5, h6 {
     /*background-size: cover;*/
 }
 
+:root {
+    --color-1: #4B8F8C;
+    --color-2: #2D232E;
+    --color-3: #F5DD90;
+    --color-4: #D3C1D2;
+    --color-5: #FFE2FE;
+}
+
+
 
 /*.content {*/
 /*  padding-top: 1000px;*/
