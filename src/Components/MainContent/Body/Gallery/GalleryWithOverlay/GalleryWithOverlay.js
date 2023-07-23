@@ -14,7 +14,7 @@ const debounce = (func, delay) => {
 }
 
 
-function GalleryWithOverlay({ images }) {
+function GalleryWithOverlay({ images, onImageClick, onModalClose }) {
     const [hoveredImage, setHoveredImage] = useState(null);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
     const theme = useTheme();
@@ -24,10 +24,12 @@ function GalleryWithOverlay({ images }) {
 
     const handleOpen = (index) => {
         setSelectedImageIndex(index);
+        if(onImageClick) onImageClick();
     };
 
     const handleClose = () => {
         setSelectedImageIndex(null);
+        if(onModalClose) onModalClose();
     };
 
     const handleNext = () => {
@@ -57,13 +59,14 @@ function GalleryWithOverlay({ images }) {
                         onMouseEnter={() => setHoveredImage(index)}
                         onMouseLeave={() => setHoveredImage(null)}
                         onClick={() => handleOpen(index)}
+                        style={cols === 1 ? { display: 'flex', justifyContent: 'center'} : {}}
                     >
                         <img
                             src={`${item.src}`}
                             srcSet={`${item.src}`}
                             alt={item.title}
                             loading="lazy"
-                            style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1%', cursor: 'auto'}}
+                            style={{maxWidth: "100vw", width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1%', cursor: 'auto'}}
                         />
                         <ImageOverlay
                             title={item.title}
@@ -82,7 +85,7 @@ function GalleryWithOverlay({ images }) {
                     <IconButton onClick={handlePrev} style={{ fontSize: '2em', color: 'white', backgroundColor: 'rgba(0,0,0,0.6)', marginRight: '1em'}}>
                         <ArrowBackIosIcon/>
                     </IconButton>
-                    <img src={images[selectedImageIndex]?.src} alt="Selected" style={{maxWidth: '90vw', maxHeight: '90vh'}}/>
+                    <img src={images[selectedImageIndex]?.src} alt="Selected" style={{maxWidth: '90vw', height:"auto"}}/>
                     <IconButton onClick={handleNext} style={{ fontSize: '2em', color: 'white', backgroundColor: 'rgba(0,0,0,0.6)', marginLeft: '1em'}}>
                         <ArrowForwardIosIcon/>
                     </IconButton>

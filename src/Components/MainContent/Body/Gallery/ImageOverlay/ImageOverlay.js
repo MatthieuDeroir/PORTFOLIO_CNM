@@ -5,9 +5,13 @@ function ImageOverlay({ title, description, isVisible, borderRadius }) {
     return (
         <div
             style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 backgroundColor: 'rgba(0, 0, 0, 0.5)',
                 color: 'white',
-                padding: '10px',
+                maxWidth: '100%',
                 height: '100%',
                 overflow: 'auto',
                 position: 'absolute',

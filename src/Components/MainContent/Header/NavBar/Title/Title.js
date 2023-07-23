@@ -19,7 +19,7 @@ export default function Title() {
     return (
         <div>
             <h1 className="main-page-title" onClick={handleOpen}>
-                <span className="main-page-title-first">P</span><span className="main-page-title-rest">lural Inspirations</span>
+                <span className="main-page-title-rest">Plural Inspirations</span>
             </h1>
             <Modal open={open} onClick={handleClose}>
                 <div>

@@ -2,13 +2,55 @@
     font-size: 20px;
     margin-bottom: 20px;
     letter-spacing: 0.4em;
-
 }
 .menu {
     display: flex;
     background-color: #2D232E; /* Ajoute une couleur de fond au menu */
     margin: 20px;
     border-radius: 10px;
+    z-index: 9999;
+    transition: all 0.5s ease;
+}
+
+.menu.hide {
+    transform: translateY(100%);
+}
+
+.sticky-menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    margin-left: 14vw;
+    width: 80vw;
+}
+
+.toggle-menu-button {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    background: #6e5d71;
+    color: #FFE2FE;
+    border: none;
+    border-radius: 15%;
+    width: 5vw;
+    height: 3vh;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.show-menu-button {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: #2D232E;
+    color: #FFE2FE;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 2s ease;
 }
 
 .menu a {
@@ -26,6 +68,40 @@
     padding: 20px;
     position: relative;
 }
+
+@media (max-width: 1200px) {
+    .menu .column:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu .column ul {
+        display: none;
+    }
+
+    /* Adding separators after each title */
+    .menu .title:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 1px;
+        left: 10vw;
+        margin-top: 10px;
+        background-color: #FFE2FE;
+    }
+
+    .menu .title {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
 
 .column:not(:last-child)::after {
     content: '';

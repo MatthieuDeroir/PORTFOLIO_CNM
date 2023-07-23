@@ -9,8 +9,8 @@ import Unedited from "./Unedited";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
-const GalleryComponent = () => {
-
+const GalleryComponent = (props) => {
+    const { onImageClick, onModalClose } = props;
     const backstage = [
         {
             src: require('Assets/Images/Art Projects/1_BLUEHOUR/BLUEHOUR_1_BACKSTAGE_1.JPG'),
@@ -951,7 +951,7 @@ const GalleryComponent = () => {
                     Early 2023
                 </p>
 
-                <GalleryWithOverlay images={blueHour}/>
+                <GalleryWithOverlay images={blueHour} onImageClick={onImageClick} onModalClose={onModalClose}/>
                 <h2>Backstage</h2>
                 <p>Words and drawings both help keep track of a blooming idea.
 
@@ -961,7 +961,7 @@ const GalleryComponent = () => {
 
                     Ideas for dialog and a more character based video were explored, but the intention of blue hour is
                     to remind us of that time rather than show it.</p>
-                <GalleryWithOverlay images={backstage}/>
+                <GalleryWithOverlay images={backstage} onImageClick={onImageClick} onModalClose={onModalClose}/>
             <div>
                 <h2 id={"unedited"}>UN?EDITED</h2>
                 <p>
@@ -974,14 +974,14 @@ const GalleryComponent = () => {
                     The mention Ø points to the lack of any digital editing. Not all mysteries/processes will be
                     explained.
                 </p>
-                <GalleryWithOverlay images={unedited}/>
+                <GalleryWithOverlay images={unedited} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h2 id="collages">COLLAGES</h2>
                 <p>
 
                 </p>
-                <GalleryWithOverlay images={collages}/>
+                <GalleryWithOverlay images={collages} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <h1 id="section2">Inspiration</h1>
             <div>
@@ -991,14 +991,14 @@ const GalleryComponent = () => {
                     This series is ongoing and started in 2022, through the sacralisation of a broken bracelet. The main
                     body of Angels are air-dry clay but materials vary revealing every angel's individuality.
                 </p>
-                <GalleryWithOverlay images={angels}/>
+                <GalleryWithOverlay images={angels} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h1 id="durable-materials">
                     <i>Durable Materials</i>
                 </h1>
                 <h2>Church and Mountain</h2>
-                <GalleryWithOverlay images={churchAndMountain}/>
+                <GalleryWithOverlay images={churchAndMountain} onImageClick={onImageClick} onModalClose={onModalClose}/>
                 <h2 >Camaïeu</h2>
                 <p>Stained-glass and mirror, Early 2022, A camaïeu is the use of multiple shades of the same colour to
                     create a composition.
@@ -1007,36 +1007,36 @@ const GalleryComponent = () => {
                     As this meditative process happened over the course of a few weeks, the war broke out in Ukraine.
                     Two pieces do not match the palette, I express my opinion in a seemingly quiet piece.
                 </p>
-                <GalleryWithOverlay images={camaieu}/>
+                <GalleryWithOverlay images={camaieu} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h2 id="mother-nature">Mother Nature is on my mind</h2>
                 <p>Watercolour is a medium I enjoy because it guides you, I surrender part of my control to the water.
                     This has made this medium an intuitive expressive one for me, however I also enjoy the transparent
                     quality of watercolour for colouring of sketches.</p>
-                <GalleryWithOverlay images={motherNature}/>
+                <GalleryWithOverlay images={motherNature} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <h1 id="section3">Practices</h1>
             <div>
                 <h2 id="analog-drawings">Analog drawings</h2>
                 <h3 >Journaling</h3>
-                <GalleryWithOverlay images={analogDrawings_JOURNALING}/>
+                <GalleryWithOverlay images={analogDrawings_JOURNALING} onImageClick={onImageClick} onModalClose={onModalClose}/>
 
                 <h3 style={{textAlign: "start", marginLeft: '10px'}}>Life Drawing</h3>
-                <GalleryWithOverlay images={analogDrawings_PORTRAIT}/>
-                <GalleryWithOverlay images={analogDrawings_LIFEDRAWING}/>
+                <GalleryWithOverlay images={analogDrawings_PORTRAIT} onImageClick={onImageClick} onModalClose={onModalClose}/>
+                <GalleryWithOverlay images={analogDrawings_LIFEDRAWING} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h2 id="digital-drawings">Digital drawings</h2>
-                <GalleryWithOverlay images={digitalDrawings}/>
+                <GalleryWithOverlay images={digitalDrawings} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h2 id="object-photography">Object photography</h2>
-                <GalleryWithOverlay images={objectPhotography}/>
+                <GalleryWithOverlay images={objectPhotography} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
             <div>
                 <h3>Self-Portaits</h3>
-                <GalleryWithOverlay images={analogDrawings_ME}/>
+                <GalleryWithOverlay images={analogDrawings_ME} onImageClick={onImageClick} onModalClose={onModalClose}/>
             </div>
         </div>
     );
