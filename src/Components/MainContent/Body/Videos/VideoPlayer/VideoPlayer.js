@@ -1,15 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import YouTube from 'react-youtube';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './VideoPlayer.css'; // assuming you have a VideoPlayer.css in the same directory
+import './VideoPlayer.css';
 
-function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
+function VideoPlayer({ videoId, isMuted }) {
     const playerRef = useRef(null);
-    const theme = createTheme({
-        palette: {
-            mode: isMuted ? 'light' : 'dark',
-        },
-    });
 
     const opts = {
         playerVars: {
@@ -28,10 +22,6 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
         }
     };
 
-    // let toggleVolumeAndTheme = () => {
-    //     toggleVolumeAndTheme();
-    // }
-
     useEffect(() => {
         if (playerRef.current) {
             isMuted ? playerRef.current.mute() : playerRef.current.unMute();
@@ -39,17 +29,14 @@ function VideoPlayer({ videoId, isMuted, toggleVolumeAndTheme }) {
     }, [isMuted]);
 
     return (
-        <ThemeProvider theme={theme}>
-            <div className="player-wrapper">
-                <YouTube
-                    className="react-player"
-                    videoId={videoId}
-                    opts={opts}
-                    onReady={onReady}
-                    onPlay={toggleVolumeAndTheme}
-                />
-            </div>
-        </ThemeProvider>
+        <div className="player-wrapper">
+            <YouTube
+                className="react-player"
+                videoId={videoId}
+                opts={opts}
+                onReady={onReady}
+            />
+        </div>
     );
 }
 

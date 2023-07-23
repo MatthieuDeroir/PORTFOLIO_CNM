@@ -24,7 +24,7 @@ export default function Body(onMenuClick) {
                     <Videos/>
                 </Grid>
                 <Grid item xs={12} md={12}>
-                    {showMenu && <Menu onMenuClick={onMenuClick}/>}
+                     <Menu onMenuClick={onMenuClick} showMenu={showMenu}/>
                 </Grid>
                 <Grid xs={12} md={12}>
                     <Gallery onImageClick={onImageClick} onModalClose={onModalClose}/>

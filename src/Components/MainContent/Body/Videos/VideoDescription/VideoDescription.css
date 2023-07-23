@@ -1,4 +1,27 @@
 .video-description {
+    width: 50vw;
+    height: 0; /* Set height to 0 */
+    padding-top: 50vw; /* And use padding-top to set the height relative to the width */
+    background: linear-gradient(45deg, #7b6b7b 30%, #4B8F8C 90%);
     border-radius: 40px;
     box-shadow: 0 0 5px black;
+    overflow: hidden;
+    fontFamily: "'Eina04-Light', sans-serif";
+    position: relative;
+}
+
+
+.description-content {
+    padding: 20px;
+}
+
+.description-button {
+    padding: 10px 20px;
+    border: 2px solid #F5DD90;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.description-button:hover {
+    background-color: #F5DD90;
+    color: #4B8F8C;
 }

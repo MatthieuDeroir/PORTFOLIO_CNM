@@ -1,13 +1,31 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './Menu.css';
 
-const Menu = ({onMenuClick}) => {
+const Menu = ({onMenuClick, showMenu}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(true); // state to track if menu is open
+    const [previousMenuState, setPreviousMenuState] = useState(true); // state to track previous menu state
+
+    useEffect(() => {
+        // if the menu is closed, set the previous menu state to false
+        if (!isMenuOpen) {
+            setPreviousMenuState(false);
+        }
+        // if the menu is open, set the previous menu state to true
+        else {
+            setPreviousMenuState(true);
+        }
+        if (!showMenu) {
+            setIsMenuOpen(false);
+        }
+        else if (showMenu && previousMenuState) {
+            setIsMenuOpen(true);
+        }
+    }, [showMenu]);
 
     return (
         <div style={{position: 'relative', height: '100%'}}>
                 <div className={`menu sticky-menu ${isMenuOpen ? "" : "hide"}`}>
-                    {isMenuOpen && (
+                    {isMenuOpen && showMenu && (
                     <button
                         className="toggle-menu-button"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}

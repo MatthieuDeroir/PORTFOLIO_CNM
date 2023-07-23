@@ -54,7 +54,16 @@ function App() {
     const [menuClicked, setMenuClicked] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const colors = ['var(--color-1)', 'var(--color-2)', 'var(--color-3)', 'var(--color-4)', 'var(--color-5)'];
+    // const colors = ['var(--color-1)', 'var(--color-2)', 'var(--color-3)', 'var(--color-4)', 'var(--color-5)'];
+
+    const colors = [
+        'linear-gradient(90deg, #2D232E 0%, #bbbbbb 20%, #cccccc 40%, #dddddd 60%, #eeeeee 80%, #fafafa 100%)', // Gray to white
+        'linear-gradient(90deg, #4B8F8C 0%, #509898 20%, #56A1A4 40%, #5CAAB0 60%, #62B3BC 80%, #afe0de 100%)', // Dark to light turquoise
+        'linear-gradient(90deg, #F5DD90 0%, #F6DE94 20%, #F8E098 40%, #F9E39C 60%, #FBE6A0 80%, #f9f7d7 100%)', // Dark to light yellow
+        'linear-gradient(90deg, #D3C1D2 0%, #D5C4D4 20%, #D8C7D6 40%, #DACAD8 60%, #DDCDDA 80%, #f0eef2 100%)', // Dark to light purple
+        'linear-gradient(90deg, #FFE2FE 0%, #FFDFFD 20%, #FFDCFD 40%, #FFD9FC 60%, #FFD6FC 80%, #ffffff 100%)' // Dark to light pink
+    ];
+
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -93,24 +102,20 @@ function App() {
 
     const getColor = () => {
         const colorIndex = Math.floor((scrollPosition / window.innerHeight) % colors.length);
-        return colors[colorIndex];
+        // Regex to extract the start color of the gradient
+        const startColor = colors[colorIndex].match(/\#\w{6}/)[0];
+        return {gradient: colors[colorIndex], startColor};
     };
 
+
     const isDark = (color) => {
-        // RGB color strings are of format "rgb(r, g, b)"
-        const rgbColor = color.match(/(\d+){3}/g);
-        if (!rgbColor) return false; // If match fails, return early with false
-        const r = rgbColor[0];
-        const g = rgbColor[1];
-        const b = rgbColor[2];
-        const brightness = brightnessByColor(r, g, b);
+        const brightness = brightnessByColor(color);
         return brightness < 128;
     };
 
-    const currentColor = getColor();
-
+    const {gradient, startColor} = getColor();
     return (
-        <div className="App" style={{ backgroundColor: currentColor, transition: 'background-color 0.5s ease', color: isDark(currentColor) ? 'white' : 'black' }}>
+        <div className="App" style={{ backgroundImage: gradient, transition: 'background 0.5s ease', color: isDark(startColor) ? 'white' : 'black' }}>
             {isOverlayVisible &&
                 <Overlay onOverlayClick={handleOverlayClick} titleMoved={titleMoved} transparent={overlayTransparent}/>}
             <ThemeContext.Provider value={toggleTheme}>
