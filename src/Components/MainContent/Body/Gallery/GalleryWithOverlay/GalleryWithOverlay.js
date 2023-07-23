@@ -117,7 +117,7 @@ function GalleryWithOverlay({ images, onImageClick, onModalClose }) {
                     <IconButton onClick={handlePrev} style={{ fontSize: '2em', color: 'white', backgroundColor: 'rgba(0,0,0,0.6)', marginRight: '1em'}}>
                         <ArrowBackIosIcon/>
                     </IconButton>
-                    <img src={images[selectedImageIndex]?.src} alt="Selected" style={{width:'70vw'}}/>
+                    <img src={images[selectedImageIndex]?.src} alt="Selected" style={{maxWidth:'80vw', maxHeight:'90vh'}}/>
                     <IconButton onClick={handleNext} style={{ fontSize: '2em', color: 'white', backgroundColor: 'rgba(0,0,0,0.6)', marginLeft: '1em'}}>
                         <ArrowForwardIosIcon/>
                     </IconButton>

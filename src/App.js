@@ -57,12 +57,13 @@ function App() {
     // const colors = ['var(--color-1)', 'var(--color-2)', 'var(--color-3)', 'var(--color-4)', 'var(--color-5)'];
 
     const colors = [
-        'linear-gradient(90deg, #2D232E 0%, #bbbbbb 20%, #cccccc 40%, #dddddd 60%, #eeeeee 80%, #fafafa 100%)', // Gray to white
-        'linear-gradient(90deg, #4B8F8C 0%, #509898 20%, #56A1A4 40%, #5CAAB0 60%, #62B3BC 80%, #afe0de 100%)', // Dark to light turquoise
-        'linear-gradient(90deg, #F5DD90 0%, #F6DE94 20%, #F8E098 40%, #F9E39C 60%, #FBE6A0 80%, #f9f7d7 100%)', // Dark to light yellow
-        'linear-gradient(90deg, #D3C1D2 0%, #D5C4D4 20%, #D8C7D6 40%, #DACAD8 60%, #DDCDDA 80%, #f0eef2 100%)', // Dark to light purple
-        'linear-gradient(90deg, #FFE2FE 0%, #FFDFFD 20%, #FFDCFD 40%, #FFD9FC 60%, #FFD6FC 80%, #ffffff 100%)' // Dark to light pink
+        'linear-gradient(90deg, #2D232E 0%, #808080 20%, #a6a6a6 30%, #bfbfbf 45%, #d9d9d9 65%, #f2f2f2 80%, #ffffff 100%)', // Gray to white
+        'linear-gradient(90deg, #4B8F8C 0%, #509898 15%, #56A1A4 30%, #5CAAB0 45%, #62B3BC 60%, #88c6c4 75%, #afe0de 90%, #ffffff 100%)', // Dark to light turquoise
+        'linear-gradient(90deg, #F5DD90 0%, #F6DE94 15%, #F8E098 30%, #F9E39C 45%, #FBE6A0 60%, #f9f3c4 75%, #f9f7d7 90%, #ffffff 100%)', // Dark to light yellow
+        'linear-gradient(90deg, #D3C1D2 0%, #D5C4D4 15%, #D8C7D6 30%, #DACAD8 45%, #DDCDDA 60%, #e4dce2 75%, #f0eef2 90%, #ffffff 100%)', // Dark to light purple
+        'linear-gradient(90deg, #FFE2FE 0%, #FFDFFD 15%, #FFDCFD 30%, #FFD9FC 45%, #FFD6FC 60%, #ffdff6 75%, #ffffff 90%, #ffffff 100%)' // Dark to light pink
     ];
+
 
 
     useEffect(() => {

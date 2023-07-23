@@ -57,11 +57,11 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            <div className="color-block" style={{backgroundColor: calculateColor('#2D232E', 0)}}></div>
-            <div className="color-block" style={{backgroundColor: calculateColor('#4B8F8C', 1)}}></div>
-            <div className="color-block" style={{backgroundColor: calculateColor('#F5DD90', 2)}}></div>
-            <div className="color-block" style={{backgroundColor: calculateColor('#D3C1D2', 3)}}></div>
-            <div className="color-block" style={{backgroundColor: calculateColor('#FFE2FE', 4)}}></div>
+            <div className="color-block color-1"></div>
+            <div className="color-block color-2"></div>
+            <div className="color-block color-3"></div>
+            <div className="color-block color-4"></div>
+            <div className="color-block color-5"></div>
         </div>
     );
 }
