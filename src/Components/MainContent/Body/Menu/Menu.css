@@ -87,7 +87,11 @@
         display: none;
     }
 
-    /* Adding separators after each title */
+    .toggle-menu-button {
+        height: 3vh;
+    }
+
+        /* Adding separators after each title */
     .menu .title:not(:last-child)::after {
         content: '';
         display: flex;

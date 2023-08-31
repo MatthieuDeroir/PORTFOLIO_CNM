@@ -10,6 +10,11 @@
     position: relative;
 }
 
+@media (max-width: 960px) {
+    .video-description {
+        width: 95vw;
+    }
+}
 
 .description-content {
     padding: 20px;

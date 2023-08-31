@@ -10,16 +10,15 @@ function Overlay({onOverlayClick, titleMoved, transparent}) {
     return (
         <div className={overlayClass} onClick={onOverlayClick}>
 
-            {/*<h1 className={titleClass}>CAMILLE NAJMA MARIE</h1>*/}
             <div className="overlay-content">
                 <div className="overlay-text">
-                    <p>"It’s with an investigative excitement and a microcosmic lens that Camille approaches her
-                        artistic processes.
-                        Her interdisciplinary works are a study on space, volume and colour. She likes to use a very
-                        wide range of materials, such as glass, metal, paper, cotton wool, plastic and occasional up
-                        cycled found objects, that she combines both with baroque extravaganza and minimal simplicity.
-                        Most of her installations are with self-produced sounds and melodies, alike an enchanteress, she
-                        walks us through childhood fairy tales and memories." -IKA Khan</p>
+                    <p>Welcome. <i>Plural inspirations</i> is a portfolio website in which I organised my works in a way that reflects the duality of my aesthetic sense.
+                        Spiritual and personal experiences inspire both my artificial and organic palettes.
+                        I’ve explored a variety of mediums, plurality is a crucial part of my layered process.
+                        It is with a instinctive process and an analytical approach that my work finds meaning.
+                        <p>Please enjoy. [click anywhere on this box]</p>
+                        <p>Camille Najma Marie 2023</p>
+                    </p>
                 </div>
 
             </div>
